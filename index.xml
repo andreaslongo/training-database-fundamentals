@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Einstieg Datenbanken</title>
+    <link>https://training.andreaslongo.com/</link>
+    <description>Recent content on Einstieg Datenbanken</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://training.andreaslongo.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Willkommen</title>
+      <link>https://training.andreaslongo.com/1-start/welcome/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/1-start/welcome/</guid>
+      <description>Ich heiße dich herzliche Willkommen zu unserem ersten Kurs &amp;#34;Einstieg Datenbanken&amp;#34;.
+ In diesem Kurs lernst du grundlegenden Konzepte kennen, die dir die Arbeit mit Datenbanken ermöglichen. Der Kurs soll dir ein solides Grundwissen vermitteln, das dir in deiner gesamten IT-Karriere nützlich sein wird.
+ Am Ende des Kurses wirst du…​
+   verschiedene Modelle zur Speicherung von Daten kennen.
+  Datenbanken grundlegend administrieren und verwalten können.
+  Objekte einer Datenbank und Datensätze erstellen und bearbeiten können.</description>
+    </item>
+    
+    <item>
+      <title>Was du benötigst</title>
+      <link>https://training.andreaslongo.com/1-start/requirements/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/1-start/requirements/</guid>
+      <description>Für unsere Live-Schulung benötigst du…​   einen Internetzugang
+  Microsoft Teams mit Mikrofon, Headset oder Ähnlichem
+  und eine aktuelle Version des SQL Server Management Studios, fertig installiert auf deinem Computer
+     Bitte bereite alles einen Tag vor Beginn der Schulung vor Lade das SQL Server Management Studio herunter und installiere es auf deinem Computer. Dabei ist nichts weiter zu beachten. Die Setup Routine führt dich durch die Installation.</description>
+    </item>
+    
+    <item>
+      <title>Glossar</title>
+      <link>https://training.andreaslongo.com/glossary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/glossary/</guid>
+      <description>Datenbank  Ein System zur elektronischen Datenverwaltung. Die wesentliche Aufgabe einer Datenbank ist es, große Datenmengen effizient, widerspruchsfrei und dauerhaft zu speichern und benötigte Teilmengen in unterschiedlichen, bedarfsgerechten Darstellungsformen für Benutzer und Anwendungsprogramme bereitzustellen.
+ Datenbanksprache  Formale Sprachen, die für den Einsatz in Datenbanksystemen entwickelt wurden. Eine normierte Sprache für Relationale Datenbanksysteme ist SQL.
+ Structured Query Language (SQL)  Eine Datenbanksprache zur Definition von Datenstrukturen in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen) und Abfragen von darauf basierenden Datenbeständen.</description>
+    </item>
+    
+  </channel>
+</rss>
