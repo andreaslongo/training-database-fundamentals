@@ -1,0 +1,7 @@
+resources/
+.vagrant/
+Vagrantfile
+Makefile
+notes.txt
+__pycache__
+tmp/

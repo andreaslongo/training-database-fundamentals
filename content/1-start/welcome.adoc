@@ -1,0 +1,25 @@
+---
+title: "Willkommen"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+Ich heiße dich herzliche Willkommen zu unserem ersten Kurs "Einstieg Datenbanken".
+
+In diesem Kurs lernst du grundlegenden Konzepte kennen, die dir die Arbeit mit Datenbanken ermöglichen.
+Der Kurs soll dir ein solides Grundwissen vermitteln, das dir in deiner gesamten IT-Karriere nützlich sein wird.
+
+*Am Ende des Kurses wirst du...*
+
+- verschiedene Modelle zur Speicherung von Daten kennen.
+- Datenbanken grundlegend administrieren und verwalten können.
+- Objekte einer Datenbank und Datensätze erstellen und bearbeiten können.
+- deine erste eigene Datenbank erstellt haben.
+- Grundlagen der SQL Sprache kennen.
+- Einen Einblick in fortgeschrittene Konzepte wie Beziehungen, Indizes und Schemas haben.
+
+Das Thema Datenbanken ist nicht ganz einfach.
+Wir werden einige komplizierte und komplexe Themen anschneiden.
+Ärgere dich also nicht, wenn du nicht alles gleich auf Anhieb verstehst.
+Du kannst dir die Webseite zum Kurs jederzeit und in aller Ruhe noch einmal anschauen.

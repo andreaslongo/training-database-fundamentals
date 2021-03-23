@@ -1,0 +1,56 @@
+---
+title: "Glossar"
+date: 2021-0308
+draft: false
+weight: 0
+---
+
+
+:url_relationale_datenbank: https://de.wikipedia.org/wiki/Relationale_Datenbank
+:url_relation: https://de.wikipedia.org/wiki/Relation_(Datenbank)
+:url_relation_db: https://de.wikipedia.org/wiki/Relation_(Mathematik)
+:url_datenbankmodell: https://de.wikipedia.org/wiki/Datenbankmodell
+:url_datenbank: https://de.wikipedia.org/wiki/Datenbank
+:url_datenbanksprache: https://de.wikipedia.org/wiki/Datenbanksprache
+:url_sql: https://de.wikipedia.org/wiki/SQL
+:url_ddl: https://de.wikipedia.org/wiki/Data_Definition_Language
+:url_dml: https://de.wikipedia.org/wiki/Data_Manipulation_Language
+:url_dbms: https://de.wikipedia.org/wiki/Datenbank#Datenbankmanagementsystem
+:url_dl_ssms: https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms
+:url_dl_sqlserver: https://www.microsoft.com/de-de/sql-server/sql-server-downloads
+:url_csv: https://de.wikipedia.org/wiki/CSV_(Dateiformat)
+:url_normalisierung: https://de.wikipedia.org/wiki/Normalisierung_(Datenbank)
+:url_keys: https://de.wikipedia.org/wiki/Schl%C3%BCssel_(Datenbank)
+
+{url_datenbank}[Datenbank]::
+Ein System zur elektronischen *Datenverwaltung*.
+Die wesentliche Aufgabe einer Datenbank ist es, große Datenmengen effizient, widerspruchsfrei und dauerhaft zu speichern und benötigte Teilmengen in unterschiedlichen, bedarfsgerechten Darstellungsformen für Benutzer und Anwendungsprogramme bereitzustellen.
+
+{url_datenbanksprache}[Datenbanksprache]::
+Formale Sprachen, die für den Einsatz in Datenbanksystemen entwickelt wurden.
+Eine normierte Sprache für Relationale Datenbanksysteme ist *SQL*.
+
+{url_sql}[Structured Query Language (SQL)]::
+Eine *Datenbanksprache* zur Definition von Datenstrukturen in relationalen Datenbanken sowie zum Bearbeiten (Einfügen, Verändern, Löschen) und Abfragen von darauf basierenden Datenbeständen.
+
+{url_ddl}[Data Definition Language (DDL)]::
+Ist Teil einer Datenbanksprache, der verwendet wird, um *Datenstrukturen* und verwandte Elemente zu beschreiben, zu ändern oder zu entfernen.
+
+{url_dml}[Data Manipulation Language (DML)]::
+Ist Teil einer Datenbanksprache, der verwendet wird, um *Daten* zu schreiben, zu lesen, zu ändern und zu löschen.
+
+{url_dbms}[Datenbankmanagementsystem (DBMS)]::
+Ist die eingesetzte *Software*, die für das Datenbanksystem installiert und konfiguriert wird.
+
+{url_csv}[CSV (Dateiformat)]::
+CSV steht für *Comma-separated values* und beschreibt den Aufbau einer Textdatei zur Speicherung oder zum Austausch einfach strukturierter Daten.
+Die Dateinamensendung lautet meist `.csv`.
+
+{url_normalisierung}[Normalisierung]::
+Die Aufteilung von Attributen (Tabellenspalten) in mehrere Relationen (Tabellen) gemäß den Normalisierungsregeln, so dass eine Form entsteht, die keine Redundanzen mehr enthält.
+
+{url_datenbankmodell}[Datenbankmodell]::
+Die theoretische Grundlage für eine Datenbank und bestimmt, in welcher Struktur Daten in einem Datenbanksystem gespeichert werden. Das bekannteste und meistverbreitete Datenbankmodell ist das relationale Datenbankmodell, das tabellenbasiert ist.
+
+{url_relationale_datenbank}[Relationale Datenbank]::
+Eine digitale Datenbank, die auf einem tabellenbasierten relationalen Datenbankmodell basiert.

@@ -1,0 +1,53 @@
+= Training - Database Fundamentals
+
+:source-language: shell
+
+:url_site: https://training.andreaslongo.com[Database Fundamentals]
+:url_repo: https://github.com/andreaslongo/training-database-fundamentals
+
+:url_asciidoc: https://en.wikipedia.org/wiki/AsciiDoc[AsciiDoc]
+:url_asciidoctor: https://asciidoctor.org[Asciidoctor]
+:url_github: https://github.com
+:url_github_actions: {url_github}/features/actions[GitHub Actions]
+:url_github_pages: https://pages.github.com[GitHub Pages]
+:url_hugo: https://gohugo.io[Hugo]
+:url_static_site_generator: https://jamstack.org/generators[static site generator]
+:url_workflow_deployment: {url_repo}/actions?query=workflow%3ADeployment
+:url_workflow_deployment_batch: {url_repo}/workflows/Deployment/badge.svg
+
+
+[link={url_workflow_deployment}]
+image::{url_workflow_deployment_batch}[Deployment]
+
+This repository contains the source code for my online course {url_site}.
+
+It's built with {url_hugo}, a {url_static_site_generator}, and hosted on {url_github_pages}.
+
+== Requirements
+
+{url_hugo} must be installed alongside {url_asciidoctor} to build the site.
+
+== Editing
+
+I write my content in {url_asciidoc} format.
+
+To get a live preview of the website, launch a local Hugo server:
+
+[source]
+----
+$ hugo server
+----
+
+It will build and serve the site with Hugo's webserver.
+The site gets automatically rebuild if you change a file.
+
+Useful options:
+
+- `--buildDrafts` to include content marked as draft
+- `--buildFuture` to add content with publishdate in the future
+- `--debug` for debugging output
+- `--verbose` for verbose output
+
+== Deployment
+
+Deployment to {url_github_pages} happens automatically via {url_github_actions} when a new tag gets pushed to the repository.

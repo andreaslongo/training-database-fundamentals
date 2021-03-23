@@ -1,0 +1,25 @@
+---
+title: "Was du benötigst"
+date: 2021-01-01
+draft: false
+weight: 2
+---
+
+== Für unsere Live-Schulung benötigst du...
+
+- einen *Internetzugang*
+- *Microsoft Teams* mit Mikrofon, Headset oder Ähnlichem
+- und eine aktuelle Version des *SQL Server Management Studios*, fertig installiert auf deinem Computer
+
+== Bitte bereite alles einen Tag vor Beginn der Schulung vor
+
+Lade das *SQL Server Management Studio* herunter und installiere es auf deinem Computer.
+Dabei ist nichts weiter zu beachten.
+Die Setup Routine führt dich durch die Installation.
+
+Testet bitte dein Mikrofon mit Microsoft Teams und startet einmal das Management Studio.
+
+== Download Management Studio (640 MB)
+
+- https://aka.ms/ssmsfullsetup (direkt link)
+- https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms

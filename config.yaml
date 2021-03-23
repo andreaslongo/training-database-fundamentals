@@ -1,0 +1,60 @@
+baseURL: "https://training.andreaslongo.com"
+defaultContentLanguage: de
+theme: learn
+
+enableInlineShortcodes: false
+enableRobotsTXT: true
+
+minify:
+  disableXML: true
+
+params:
+  author: Andreas Longo
+  disableBreadcrumb: false
+  disableLandingPageButton: true
+  disableNextPrev: false
+  disableInlineCopyToClipBoard: true
+  showVisitedLinks: true
+  disableMermaid: false
+
+languages:
+  de:
+    languageName: Deutsch
+    languageCode: de-de
+    weight: 1
+    title: Einstieg Datenbanken
+    description: Grundlagen und Praxis für IT-Experten
+
+# Enable site search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Privacy Config
+# https://gohugo.io/about/hugo-and-gdpr/
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+  instagram:
+    disable: true
+  twitter:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true
+
+markup:
+  asciidocExt:
+    attributes:
+      note-caption: '<i class="fas fa-info-circle"></i>'

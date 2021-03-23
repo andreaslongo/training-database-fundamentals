@@ -1,0 +1,13 @@
+---
+title: "Einstieg Datenbanken"
+date: 2021-03-08
+draft: false
+weight: 0
+
+chapter: true
+pre: ""
+---
+
+=== Grundlagen und Praxis für IT-Experten
+
+= Einstieg Datenbanken
