@@ -1,0 +1,25 @@
+---
+title: "Datenbank Views"
+date: 2021-03-08
+draft: false
+weight: 9
+---
+
+In relationalen Datenbanken werden *Tabellen* in thematisch gruppierte *Datensätze* aufgeteilt, zum Beispiel die Tabellen `Produkte` und `Kunden`.
+Die Datensätze werden mit Hilfe von *Schlüsseln (Keys)* zu neuen Ansichten kombiniert, zum Beispiel die Tabelle `Bestellungen`.
+
+== Was sind Datenbank Views?
+
+SQL Server nutzt sogenannte *Views* um Datensätze aus mehreren Tabellen zu kombinieren, ohne die Datensätze in einer eigenen Tabelle zu speichern.
+
+In unserer Beispieldatenbank sehen wir einige vorbereitete Views.
+Du findest diese im Management Studio unterhalb der Datenbank im Punkt `Views`.
+
+Schaue dir nun die Ergebnisse eines Views mit `Select Top 1000 Rows` an.
+Du wirst sehen, dass die Ergebnisse sich nicht von einer Abfrage auf Tabellen unterscheidet.
+
+Es gibt jedoch einen entscheidenden Unterschied.
+Views speichern selbst *keine Datensätze*, sie sind also keine Tabellen.
+Views holen sich die Datensätze aus anderen Tabellen und stellen diese in einer benutzerdefinierten *Ansicht* zur Verfügung.
+
+Mit eigenen Views kannst du selbst entscheiden, welche Daten du aus welchen Tabellen sehen willst und wie die Daten angeordnet sein sollen.

@@ -1,0 +1,44 @@
+---
+title: "Lösung"
+date: 2021-03-08
+draft: false
+weight: 8
+---
+
+
+== Nutze SQL Anweisungen für die Arbeit mit Datensätzen
+
+[source]
+----
+-- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein.
+USE MyBooks;
+
+INSERT INTO WhereAreMyBooks (Title, Author, BookLocations, ShelfNumber)
+VALUES ('Treasure Island', 'RL Stevenson', 'Bedroom', 4),
+       ('Cloud Atlas', 'David Mitchell', 'Bedroom', 2),
+       ('How to Lie with Maps', 'Mark Monnonier', 'Office Left', 3)
+;
+
+SELECT *
+FROM WhereAreMyBooks;
+
+
+-- Lösche einen der neuen Datensätze.
+DELETE
+FROM WhereAreMyBooks
+WHERE Title = 'Treasure Island'
+
+
+-- Frage einige Daten mit dem `SELECT` Befehl ab.
+SELECT *
+FORM WhereAreMyBooks
+WHERE Author = 'David Mitchell'
+
+SELECT *
+FORM WhereAreMyBooks
+WHERE BookcaseLocation = 'office left'
+
+SELECT *
+FORM WhereAreMyBooks
+WHERE Title LIKE '%map%'
+----

@@ -1,0 +1,50 @@
+---
+title: "Der TRUNCATE Befehl"
+date: 2021-03-08
+draft: false
+weight: 6
+---
+
+:experimental:
+
+Mit `TRUNCATE` kannst *alle* Datensätze aus einer Tabelle *löschen*.
+
+Die Datensätze werden gelöscht, aber die Spalten und andere Einstellungen bleiben bestehen.
+Das kann nützlich sein, wenn du zum Beispiel eine leere Tabelle brauchst, ohne diese neu anlegen zu müssen.
+
+== Datensätze löschen
+
+Öffne ein neues Query.
+
+[source]
+----
+USE [MeineNeueDatenbank]
+SELECT * INTO KundenKopie
+FROM Kunden;
+
+
+USE [MeineNeueDatenbank]
+SELECT *
+FROM KundenKopie;
+
+
+USE [MeineNeueDatenbank]
+TRUNCATE TABLE KundenKopie;
+
+
+USE [MeineNeueDatenbank]
+SELECT *
+FROM KundenKopie;
+----
+
+Führe die Code Blöcke nacheinander aus, indem du sie einzeln markierst und dann *Execute* klickst.
+
+Nach der `TRUNCATE` Anweisung sind alle Datensätze aus der Tabelle `KundenKopie` gelöscht.
+
+Entferne nun noch die Tabelle `KundenKopie` aus der Datenbank.
+
+[source]
+----
+USE [MeineNeueDatenbank]
+DROP TABLE KundenKopie;
+----

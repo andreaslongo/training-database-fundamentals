@@ -1,0 +1,15 @@
+---
+title: "Aufgabe"
+date: 2021-03-08
+draft: false
+weight: 11
+---
+
+== Erstelle deine eigene Datenbank
+
+Denke an die Typen von Informationen, die du speichern möchtest und beginne eine Datenbank um diese Anforderungen zu bauen.
+
+- Überlege dir eigene Anforderungen für deine Daten
+- Erstelle eine neue Datenbank
+- Erstelle eine Tabelle in der Datenbank
+- Füge einige Datensätze in deine Tabelle ein

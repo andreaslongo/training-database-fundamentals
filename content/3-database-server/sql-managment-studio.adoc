@@ -1,0 +1,51 @@
+---
+title: "SQL Management Studio"
+date: 2021-03-08
+draft: false
+weight: 3
+---
+
+:experimental:
+
+// TODO: Screenshots
+
+
+Das *SQL Server Management Studio (SSMS)* ist eine graphische Benurzerschnittstelle und dein Hauptwerkzeug, wenn du mit Microsoft SQL Server DBMS Instanzen arbeitest.
+
+Du kannst damit...
+
+- Instanzen verwalten
+- Datenbanken anlegen und löschen
+- Daten abfragen, erfassen, ändern und löschen
+- ...
+
+Die meisten Aktionen im Management Studio kannst du mit einem *Rechtsklick* auf ein *Objekt* ausführen.
+Objekte sind zum Beispiel Datenbanken, Benutzer, Tabellen, und mehr.
+
+== Mit einer Instanz verbinden
+
+Wenn du das Management Studio öffnest, siehst du zunächst eine *Anmeldemaske*.
+
+- Unter *Server type* kannst du verschiedene Datenbank Services auswählen. Stelle hier `Database Engine` ein, um dich zur Hauptkomponente deiner Instanz zu verbinden.
+
+- Bei *Server name* trägst du den Netzwerknamen deiner Instanz ein zum Beispiel `sqlinstance.westeurope.azurecontainer.io`
+
+- Mit *Authentication* wählst du aus, wie du dich an deiner Instanz anmelden möchtest.
+Wähle hier `SQL Server Authentication` aus gib deinen *Usernamen* und das *Password* an.
+
+Nun kannst du dich mit einem Klick auf `Connect` mit deiner Instanz verbinden.
+
+
+== Die Benutzeroberfläche
+
+Im *Object Explorer* siehst du nun deine Datenbank Instanz.
+Du siehst den *Instanznamen*, die DBMS *Version* und den *Benutzernamen*, mit dem du verbunden bist.
+In der Baumstruktur siehst du außerdem alle *Objekte* deiner Instanz, zum Beispiel die Datenbanken.
+
+Du kannst sämtliche Fenster innerhalb des Management Studios mit *Klicken und Ziehen* neu anordnen.
+Die Fenster lassen sich außerdem verstecken, anpinnen und schließen.
+
+Solltest du einmal versehentlich ein Fenster geschlossen oder verschoben haben, kannst du die *Standardansicht* wiederherstellen.
+Klicke dazu in der Menüleiste auf menu:Window[Reset Window Layout].
+
+Den *Object Explorer* und einige andere Ansichten findest du außerdem im Menü menu:View[].

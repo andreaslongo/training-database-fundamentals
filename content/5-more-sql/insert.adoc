@@ -1,0 +1,47 @@
+---
+title: "Der INSERT Befehl"
+date: 2021-03-08
+draft: false
+weight: 3
+---
+
+Mit `INSERT` kannst du neue Datensätze in eine Tabelle *eintragen*.
+
+== Datensätze eintragen
+
+Füge einen neuen Datensatz in die Tabelle `Mitarbeiter` ein.
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+INSERT INTO Mitarbeiter
+VALUES ('Martin', 'Hofer', 'IT Support', 'mhofer@example.com')
+;
+----
+
+Du kannst nun den neuen Eintrag in deiner Tabelle sehen.
+
+Nutze `SELECT` um dir alle Einträge anzuzeigen.
+
+== Datensätzen gezielt eintragen
+
+Im letzten Beispiel hast du die *Werte (Values)* für deinen neuen Datensatz nach der *Position* der Spalten in deiner Tabelle eingetragen.
+Die erste Spalte in deiner Tabelle ist `FirstName`, also ist der erste Wert in deiner Abfrage der Vorname, usw..
+Dein Datenbanksystem trägt die Werte also anhand ihrer Position in deiner Abfrage ein.
+
+Im nächsten Beispiel siehst du, wie du die Spalten selbst bestimmen kannst.
+Du kannst damit zum Beispiel nur bestimmte Spalten ausfüllen (sofern es deine Regeln erlauben -- `NOT NULL`?)
+Oder du kannst die Reihenfolge ändern, wenn du beispielsweise zuerst die Email Adresse eintragen möchtest.
+
+[source]
+----
+INSERT INTO Mitarbeiter (Email, Vorname, Nachname)
+VALUES ('mpichler@example.com', 'Mathias', 'Pichler'),
+       ('sscherer@example.com', 'Stefan', 'Scherer')
+;
+----
+
+Du hast nun zwei neue Datensätze in deine Tabelle eingetragen.
+
+Lasse dir die Einträge mit `SELECT` anzeigen.

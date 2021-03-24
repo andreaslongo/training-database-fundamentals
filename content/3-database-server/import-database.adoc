@@ -1,0 +1,56 @@
+---
+title: "Eine Datenbank hinzufügen"
+date: 2021-03-08
+draft: false
+weight: 4
+---
+
+:experimental:
+
+Es ist nun an der Zeit, dass du deine erste Datenbank in die Instanz einbindest.
+
+Deine Instanz besteht aktuell nur aus den *System Datenbanken*.
+Die System Datenbanken enthalten Daten für die Instanz selbst.
+Dort sind Beispielsweise alle *SQL User* und *Logins* eingetragen.
+
+*User Datenbanken* dagegen sind alle selbst erstellten Datenbanken.
+Dort sind deine eigenen Daten oder die Daten von Anwendungen gespeichert.
+Eine Instanz kann mehrere User Datenbanken verwalten.
+
+User Datenbanken müssen entweder neu angelegt oder importiert werden.
+
+== Eine Datenbank Importieren
+
+Die einfachste und gängigste Methode, eine Datenbank zu importieren ist, die Datenbank aus einer *Backup Datei* wiederherzustellen.
+
+Backup Dateien von Datenbanken haben normalerweise die Dateiendung `.bak`.
+Du findest das Backup einer Datenbank bei den https://github.com/andreaslongo/training-database-fundamentals/tree/main/static/examples[Beispielen] (`example_database.bak`).
+
+Diese möchten wir jetzt einbinden.
+
+. Klicke mit der rechten Maustaste auf menu:Databases[Restore Databases...]
+
+. Beim Punkt *Source*, wähle *Device* aus
+. Klicke auf *[...]* und im nachfolgenden Fenster auf *Add* um eine Backup Datei auszuwählen
+. Bestätige nun alle Fenster mit *OK* um den Restore Prozess zu starten
+
+Du siehst nun eine neue Datenbank im Object Explorer unter Databases.
+Das ist deine erste *User Datenbank*.
+
+== Die Datenbank öffnen
+
+Du kannst die *Objekte* deiner Datenbank im *Object Explorer* sehen und öffnen.
+
+- Die *Tabellen* der Datenbank findest du unter dem Punkt `Tables`.
+- Die *Spalten* einer Tabelle siehst du unterhalb der Tabelle bei `Columns`
+
+Nun schauen wir uns die *Datensätze* einer Tabelle an.
+
+- Klicke dazu mit der rechten Maustaste auf eine Tabelle und wähle *Select Top 1000 Rows* aus.
+
+Es erscheint ein neues Fenster.
+Im oberen Teil siehst du eine automatisch erstellte *SQL Abfrage (Query)*.
+Im unteren Teil siehst du das *Ergebnis* deiner Abfrage.
+Du siehst außerdem noch eine *Statuszeile* mit dem aktuellen Stand der Abfrage: `Query executed successfully`
+
+Die Abfrage zeigt dir die ersten 1000 Datensätze der Tabelle an.

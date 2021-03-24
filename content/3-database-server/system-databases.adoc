@@ -1,0 +1,50 @@
+---
+title: "Die System Datenbanken"
+date: 2021-03-08
+draft: false
+weight: 10
+---
+
+:experimental:
+
+Im Management Studio, unter dem Punkt `Databases` siehst du den Punkt `System Databases`.
+Dort befinden sich die *System Datenbanken* zum Beispiel `master`, `model` und `tempdb`.
+Dies sind vorgefertigte Datenbanken, die jede SQL Instanz benötigt.
+Sie werden bei der Installation des DBMS erstellt.
+
+Du wirst nur recht selten direkt mit diesen Datenbanken zu tun haben.
+Es ist aber hilfreich zu wissen, wozu sie gut sind.
+
+== Master
+
+Die `master` Datenbank enthält die *Konfiguration* und einige weitere Details deiner Instanz.
+Die Instanz nutzt diese für verschiedene internen Prozesse.
+Außerdem sind dort alle User Datenbanken eingetragen.
+
+Wenn du also eine neue Datenbank anlegst, wird diese in der `master` Datenbank vermerkt:
+
+menu:master[Views > System Views > sys.databases > Select Top 1000 Rows]
+
+== Model
+
+Die `model` Datenbank ist die *Vorlage* für alle neuen Datenbanken, die auf der Instanz angelegt werden.
+Wenn du Änderungen an der `model` Datenbank machst, bekommen alle Datenbanken, die du danach anlegst automatisch auch diese Änderungen.
+Das können Datenbank Einstellungen sein, aber auch vorgefertigte Inhalte in der Datenbank selbst.
+
+Erstelle zum Beispiel eine neue Tabelle `temp` mit der Spalte `test (int)` in der `model` Datenbank.
+Lege dann eine neue, leere Datenbank an.
+Du siehst, deine neue Datenbank hat nun automatisch eine Tabelle `temp` mit der Spalte `test` bekommen, wie von der `model` Datenbank vorgegeben.
+
+== MSDB
+
+Die `msdb` Datenbank wird vom *SQL Server Agent* verwendet.
+Der Agent ist für Automatisierungen zuständig.
+Du kannst damit zum Beispiel automatisch Backups deiner Datenbanken zu bestimmten Zeiten erstellen lassen.
+Der Agent wird auch für regelmäßige Wartungsarbeiten an deinen Datenbanken verwendet.
+
+== TempDB
+
+Zuletzt gibt es noch die `tempdb` Datenbank.
+Das ist ein *temporärer Speicher*, den deine Instanz für verschiedene Datenprozesse verwendet.
+Wenn du zum Beispiel deine Tabellen mit dem Designer änderst, werden die Änderungen zuerst in der `tempdb` zwischengespeichert, bevor sie endgültig auf deine Datenbank übertragen werden.
+Die `tempdb` wird bei jedem Neustart der Instanz geleert und neu aufgebaut.

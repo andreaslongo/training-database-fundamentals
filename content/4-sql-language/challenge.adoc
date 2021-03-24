@@ -1,0 +1,30 @@
+---
+title: "Aufgabe"
+date: 2021-03-08
+draft: false
+weight: 7
+---
+
+
+== Erstelle eine Tabelle mit SQL Anweisungen
+
+Nutze für die folgenden Aufgaben nur SQL-Befehle.
+
+Öffne ein neues Query und kopiere die Aufgaben in den Editor.
+Wenn du fertig bist, speichere deine Lösung.
+
+[source]
+----
+-- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe.
+
+
+-- Entferne die Tabelle aus deiner Datenbank.
+
+
+-- Erstelle die gleiche Tabelle erneut.
+
+
+-- Füge eine neue Spalte in die Tabelle ein.
+
+
+----

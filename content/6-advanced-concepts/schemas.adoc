@@ -1,0 +1,42 @@
+---
+title: "Schemas"
+date: 2021-03-08
+draft: false
+weight: 5
+---
+
+Dir ist vielleicht aufgefallen, dass jedesmal wenn wir eine Tabelle erstellt haben die Buchstaben `dbo` vor dem Tabellennamen automatisch vom Datenbanksystem eingetragen wurden.
+
+`dbo` steht für *Datenbankbesitzer (Database Owner)*.
+Wenn wir Objekte erstellen, markiert das Datenbanksystem dieses Objekt mit der Identifikation der Person, die dieses Objekt *besitzt*.
+
+Diese Markierung wird *Schema* genannt.
+Schemas werden genutzt um Tabellen in logische *Gruppen* einzuteilen.
+
+== Ein Beispiel
+
+In einer Firma könnte zum Beispiel die Abteilung "Verkauf" einige Kunden haben, über die sie Daten erfassen und die Abteilung "Werbung" erfasst ihre eigenen Kunden.
+
+Schemas machen es einfach festzulegen und zu erkennen, welche Tabellen zu welcher Abteilung gehören.
+
+== Eigene Schemas erstellen
+
+Wir können eigene Schemas erstellen, um unsere Tabellen zu organisieren.
+
+Öffne im Management Studio unter deiner Datenbank den Punkt `Security`.
+Klicke mit der rechten Maustaste auf `Schemas` und wähle `New Schema...`
+
+Gib dem Schema einen Namen: `verkauf`.
+Lege den Besitzer für dieses Schema mit dem Punkt `Schema owner` fest: `dbo`
+
+Bestätige deine Eingaben mit *OK*
+Unter dem Punkt `Schemas` kannst du nun dein neues Schema sehen.
+
+Erstelle nun eine neue Tabelle mit einer Spalte `KundenID`.
+Im Editor der Tabelle, gehe im Menü auf menu:View[Properties Window] oder drücke die Taste *F4*.
+Im `Properties` Fenster unter `Schema` kannst du nun dein neues Schema eintragen, um die Tabelle mit diesem Schema zu verknüpfen.
+
+Speichere deine Einstellungen und die Tabelle unter dem Namen `Kunden`.
+Du siehst nun eine neue Tabelle `Kunden` unter dem neuen Schema: `verkauf.Kunden`
+
+Mit der Hilfe von Schemas kannst du so deine Daten und Tabellen besser organisieren.

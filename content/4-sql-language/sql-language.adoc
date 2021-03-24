@@ -1,0 +1,128 @@
+---
+title: "Was ist SQL?"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+:experimental:
+:source-language: sql
+
+Die *Structured Query Language (SQL)* ist eine weit verbreitete Sprache, ähnlich einer Programmiersprache, zur Verwaltung von relationalen Datenbanken.
+
+Mit SQL kannst du...
+
+- Datenstrukturen erstellen
+- Datensätze erfassen und ändern
+- Datensätze abfragen
+- ...
+
+Microsoft SQL Server nutzt eine Variante der SQL Standardsprache und nennt diese *Transact SQL (T-SQL)*.
+Diese Variante erweitert die grundlegende Sprache SQL um einige Zusatzkomponenten.
+
+In diesem Kurs befassen wir uns mit der grundlegenden Sprache SQL.
+Du wirst also die SQL Anweisungen aus diesem Kurs oder zumindest Teile davon auf fast jedem anderen SQL basierten Datenbanksystem einsetzen können.
+
+== SQL Anweisungen
+
+Nachdem du gelernt hast, wie du Aktionen mit dem Management Studio ausführen kannst, schauen wir uns nun einige Grundlagen der SQL Sprache an.
+
+Mit SQL kannst du so gut wie alle Aktionen aus dem Management Studio "programmieren".
+Du kannst damit einzelne Aktionen genauer steuern und diese bei Bedarf mehrfach und auch automatisch ausführen.
+Außerdem kannst du deinen SQL Anweisungen speichern und später wiederverwenden.
+
+== SQL-Befehle
+
+Hier findest du eine Übersicht der am häufigsten verwendeten *SQL-Befehle*.
+
+Folgende Befehle werden verwendet, um die *Strukturen* einer Datenbank zu definieren.
+Du kannst damit Datenbank *Objekte*, wie zum Beispiel Tabellen, Views oder ganze Datenbanken erstellen oder ändern.
+
+....
+CREATE		DROP
+USE		TRUNCATE
+ALTER
+....
+
+
+Die nächsten Befehle erlauben es dir, mit *Datensätzen* zu arbeiten.
+Du kannst damit *Datensätze* abfragen, erstellen, ändern oder löschen.
+
+....
+INSERT		SELECT
+UPDATE		DELETE
+MERGE
+....
+
+
+== Regeln der SQL Sprache
+
+Bevor wir unsere eigenen SQL Anweisungen schreiben, solltest wir uns noch einige Regeln der Sprache anschauen.
+
+=== Groß- und Kleinschreibung
+
+SQL unterscheidet *nicht* zwischen Groß- und Kleinschreibung.
+Der Befehl `USE` ist gleich `use`, `uSe` oder `Use`.
+
+Schreibe jedoch deine Befehle immer in Großbuchstaben.
+Damit kannst du deinen Anweisungen leichter lesen.
+
+[source]
+----
+USE [meineDatenbank];
+SELECT Artikel,Kunde,Datum,Preis FROM Tabelle_1;
+----
+
+=== Leerzeichen
+
+SQL *ignoriert* Leerzeichen.
+Das erlaubt es dir, deinen Anweisungen mit Leerzeichen zu formatieren.
+Damit kannst du deinen Code leichter lesen.
+
+[source]
+----
+USE [meineDatenbank];
+
+SELECT Artikel,
+       Kunde,
+       Datum,
+       Preis
+FROM Tabelle_1;
+----
+
+=== Abschluss einer Anweisung
+
+Nutze *am Ende jeder Anweisung* das sogenannte *Statement Terminator* Zeichen `;`.
+
+Damit signalisierst du dem Programm, dass die Anweisung beendet ist und mit der nächsten Anweisung weitergemacht werden kann.
+
+=== Kommentare
+
+Du kannst *Kommentare* in deinen SQL Code einfügen.
+Kommentare werden nicht ausgeführt.
+Damit kannst du zum Beispiel Notizen in deinem Code hinterlegen.
+
+[source]
+----
+/*
+Dies ist ein Block-Kommentar
+Er kann mehrere Zeilen lang sein.
+*/
+
+USE [meineDatenbank];
+
+-- Dies ist ein Zeilenkommentar, er ist nur eine Zeile lang.
+SELECT artikel,
+       kunde
+FROM tabelle_1;
+----
+
+== Automatische Vorschläge im Management Studio
+
+Wenn du SQL Code im Management Studio schreibst, bekommst du automatisch Vorschläge zu Anweisungen oder Objekten, die du verwenden kannst.
+Diese Funktion nennt sich *IntelliSense*.
+
+IntelliSense warnt dich auch, wenn es Fehler in deiner Anweisung entdeckt und markiert die Stellen entsprechend.
+
+Manchmal kann es notwendig sein IntelliSense neu zu laden.
+Drücke kbd:[STRG + Shift + R] wenn du keine oder falsche Vorschläge von IntelliSense bekommst.

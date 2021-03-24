@@ -1,0 +1,27 @@
+---
+title: "Aufgabe"
+date: 2021-03-08
+draft: false
+weight: 7
+---
+
+
+== Nutze SQL Anweisungen für die Arbeit mit Datensätzen
+
+Nutze für die folgenden Aufgaben nur SQL-Befehle.
+
+Öffne ein neues Query und kopiere die Aufgaben in den Editor.
+Wenn du fertig bist, speichere deine Lösung.
+
+[source]
+----
+-- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein.
+
+
+-- Lösche einen der neuen Datensätze.
+
+
+-- Frage einige Daten mit dem `SELECT` Befehl ab.
+
+
+----

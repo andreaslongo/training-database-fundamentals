@@ -1,0 +1,180 @@
+---
+title: "Der MERGE Befehl"
+date: 2021-03-08
+draft: false
+weight: 6
+---
+
+Mit `MERGE` kannst du zwei Tabellen miteinander vergleichen und die *Unterschiede* in den Datensätzen entweder *ergänzen*, *löschen* oder *überschreiben*.
+
+Der `MERGE` Befehl ist etwas komplizierter als die übrigen Befehle, die du bisher kennengelernt hast.
+
+== Änderungsdaten erstellen
+
+Öffne ein neues Query.
+
+Erstelle eine neue Tabelle `KundenUpdates`.
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+CREATE TABLE KundenUpdates (
+    KundenID int NOT NULL,
+    Vorname nvarchar(50),
+    Nachname nvarchar(50),
+    Telefonnummer nchar(30),
+    Adresse nvarchar(255),
+    Stadt nvarchar(50),
+    Bundesland nchar(50),
+    Postleitzahl nchar(4)
+);
+----
+
+Füge der Tabelle einige Datensätzen als Beispiele hinzu.
+
+[source]
+----
+INSERT INTO KundenUpdates (KundenID, Adresse, Stadt, Bundesland, Postleitzahl)
+VALUES (1, 'Hauptstraße 17', 'Wals-Siezenheim', 'Salzburg', '5071');
+
+INSERT INTO KundenUpdates (KundenID, Nachname)
+VALUES (4, 'Pichler');
+
+INSERT INTO KundenUpdates (KundenID, Telefonnummer)
+VALUES (3, '(+43) 664 555 555');
+
+INSERT INTO KundenUpdates
+VALUES (11, 'Peter', 'Scherer', '(+43) 664 777 777'), 'Maria-Theresien-Straße 18', 'Innsbruck', 'Tirol', '6020')
+----
+
+Lasse dir die Datensätze der Tabelle mit `SELECT` anzeigen.
+
+Was du hier siehst sind gesammelte Änderungen an Datensätzen.
+Du siehst zum Beispiel der Kunde mit der ID 4 seinen Nachnamen auf `Pichler` ändern möchte.
+Du siehst auch, dass Kunde Nr 3 seine Telefonnummer ändert, usw.
+
+== Wie funktioniert der MERGE Befehl?
+
+Wir möchten nun diese Änderungen auf unsere bestehende Tabelle `Kunden` anwenden.
+Dazu benutzt du den `MERGE` Befehl.
+Schaue dir das folgende Beispiel und die Kommentare dazu weiter unten genau an.
+
+[source]
+----
+MERGE Kunden <1>
+USING KundenUpdates <2>
+ON Kunden.KundenID = KundenUpdates.KundenID <3>
+WHEN MACTHED AND <4>
+    KundenUpdates.Vorname IS NOT NULL THEN <5>
+    UPDATE
+    SET Kunden.Vorname = KundenUpdates.Vorname; <6>
+----
+
+<1> Der `MERGE` Befehl muss zuerst wissen, wohin die änderungen gespeichert werden sollen
+<2> Wir möchten die Tabelle `Kunden` mit der Tabelle `KundenUpdates` vergleichen
+<3> Wir geben an, über welche Spalten die beiden Tabellen verknüpft werden sollen
+<4> Wenn die IDs der beiden Datensätze gleich sind *und (AND)*
+<5> Wenn der `Vorname` aus der Tabelle `KundenUpdates` nicht `NULL` ist *dann (THEN)*
+<6> Update den `Vornamen` in der Tabelle `Kunden` aus der Tabelle `KundenUpdates`
+
+Wir gehen also zur Tabelle `Kunden`, holen uns Datensätze aus der Tabelle `KundenUpdates` und für jeden Kunden, bei dem die ID Nummer übereinstimmt und dessen Vorname nicht leer ist, ändern wir den Vornamen.
+
+== Änderungsdaten abgleichen
+
+Wir tun nun dasselbe noch für die übrigen Spalten.
+
+- `Nachname`
+- `Telefonnummer`
+- `Adresse`
+- `Stadt`
+- `Bundesland`
+- `Postleitzahl`
+
+Und hier ist nun die (fast) vollständige MERGE Anweisung.
+
+[source]
+----
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Vorname IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Vorname = KundenUpdates.Vorname;
+
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Nachname IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Nachname = KundenUpdates.Nachname;
+
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Telefonnummer IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Telefonnummer = KundenUpdates.Telefonnummer;
+
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Adresse IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Adresse = KundenUpdates.Adresse;
+
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Stadt IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Stadt = KundenUpdates.Stadt;
+
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Bundesland IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Bundesland = KundenUpdates.Bundesland;
+
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN MACTHED AND
+    KundenUpdates.Postleitzahl IS NOT NULL THEN
+    UPDATE
+    SET Kunden.Postleitzahl = KundenUpdates.Postleitzahl;
+----
+
+Wenn keine Übereinstimmung in den Datensätze in den Tabellen gefunden wurde, also wenn ein Datensatz in der Tabelle `KundenUpdates` noch nicht in der Tabelle `Kunden` existiert, dann füge einen kompletten neuen Datensatz in die `Kunden` Tabelle ein.
+
+[source]
+----
+MERGE Kunden
+USING KundenUpdates
+ON Kunden.KundenID = KundenUpdates.KundenID
+WHEN NOT MATCHED BY TARGET THEN
+    INSERT (Vorname, Nachname, Telefonnummer, Adresse, Stadt, Bundesland, Postleitzahl)
+    VALUES (
+        KundenUpdates.Vorname,
+        KundenUpdates.Nachname,
+	KundenUpdates.Telefonnummer,
+	KundenUpdates.Adresse,
+	KundenUpdates.Stadt,
+	KundenUpdates.Bundesland,
+	KundenUpdates.Postleitzahl
+    )
+----
+
+Wenn du nun all diese Anweisungen ausführst, wird deine `Kunden` Tabelle mit den Änderungen aus der `KundenUpdates` Tabelle aktualisiert.
+Lasse dir die Änderungen mit `SELECT` anzeigen.
+
+Das war nun eine ganze Menge Code für diese Aufgabe.
+Aber bedenke, du musst diesen Code nur einmal schreiben und speichern.
+Wann immer du einen solchen Abgleich machen möchtest, führst du einfach erneut deine gespeicherte Abfrage aus.

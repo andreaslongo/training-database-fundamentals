@@ -1,0 +1,34 @@
+---
+title: "Lösung"
+date: 2021-03-08
+draft: false
+weight: 8
+---
+
+
+== Erstelle eine Tabelle mit SQL Anweisungen
+
+[source]
+----
+-- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe.
+USE MyBooks;
+
+
+-- Entferne die Tabelle aus deiner Datenbank
+DROP TABLE BookLocations;
+
+
+-- Erstelle die gleiche Tabelle erneut
+CREATE TABLE WhereAreMyBooks (
+    Title nvarchar(100) NOT NULL,
+    Author nvarchar(100) NOT NULL,
+    BookcaseLocation nvarchar(50) NOT NULL,
+    ShelfNumber int NOT NULL
+);
+
+
+-- Füge eine neue Spalte in die Tabelle ein
+ALTER TABLE WhereAreMyBooks
+    ADD ISBN char(13) NULL
+;
+----

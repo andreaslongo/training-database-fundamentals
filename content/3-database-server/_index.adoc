@@ -1,0 +1,13 @@
+---
+title: "Datenbank Server"
+date: 2021-03-08
+draft: false
+weight: 3
+
+chapter: true
+pre: "<b>2. </b>"
+---
+
+=== Bereitstellen von Datenbanken
+
+= Datenbank Server

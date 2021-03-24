@@ -1,0 +1,56 @@
+---
+title: "Der USE Befehl"
+date: 2021-03-08
+draft: false
+weight: 3
+---
+
+:experimental:
+
+Mit `USE` kannst du eine Datenbank *auswählen*.
+
+Du kannst damit sicherstellen, dass Anweisungen auf der gewünschten Datenbank ausgeführt werden und nicht auf der falschen Datenbank.
+
+Du kannst die aktive Datenbank auch mit dem Drop-Down Feld im Management Studio auswählen.
+`USE` hat den gleichen Effekt.
+
+== Datenbank mit dem Management Studio auswählen
+
+Öffne ein neues Query mit *New Query*.
+
+Wähle nun die `master` Datenbank im Drop-Down Feld, und führe folgende Anweisung aus.
+
+[source]
+----
+CREATE TABLE MitarbeiterKopie (
+    MitarbeiterID int IDENTITY (1,1) NOT NULL,
+    Vorname nvarchar(50) NOT NULL,
+    Nachname nvarchar(50) NOT NULL,
+    Job nvarchar(50) NULL,
+    Email nvarchar(50) NOT NULL
+);
+----
+
+Die Tabelle `MitarbeiterKopie` wurde nun in der `master` Datenbank erstellt.
+
+== Datenbank mit USE auswählen
+
+Mit `USE` kannst du die Datenbank direkt in deiner Anweisung bestimmen.
+Du brauchst dann das Drop-Down Feld nicht mehr und kannst dir sicher sein, dass die richtige Datenbank ausgewählt ist.
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+CREATE TABLE MitarbeiterKopie (
+    MitarbeiterID int IDENTITY (1,1) NOT NULL,
+    Vorname nvarchar(50) NOT NULL,
+    Nachname nvarchar(50) NOT NULL,
+    Job nvarchar(50) NULL,
+    Email nvarchar(50) NOT NULL
+);
+----
+
+Die Tabelle wurde nun in der `MeineNeueDatenbank` Datenbank erstellt.
+
+Lösche nun noch die Tabelle `MitarbeiterKopie` aus der `master` Datenbank.

@@ -1,0 +1,134 @@
+---
+title: "Beziehungen"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+Mit *Beziehungen* zwischen einzelnen Tabellen können wir unsere Daten strukturieren.
+Wir können verschiedene Arten von Beziehungen nutzen, um unterschiedliche Gegebenheiten aus der realen Welt zu modellieren.
+
+Mit relationalen Datenbank können drei Arten von Beziehungen hergestellt werden:
+
+- Eins zu Eins (one to one)
+- Eins zu Mehreren (one to many
+- Mehrere zu Mehrere (many to many)
+
+== Die "Eins zu Eins" Beziehung
+
+Eins zu Eins Beziehungen werden über die *Primärschlüssel (Primary Keys)* von Tabellen hergestellt.
+
+++++
+{{< mermaid align="left">}}
+classDiagram
+    Mitarbeiter "1" --> "1" MitarbeiterDetails
+
+    class Mitarbeiter{
+	MitarbeiterID: Key
+	Vorname
+	Nachname
+	Telefonnummer
+	Email
+	...
+    }
+
+    class MitarbeiterDetails{
+        MitarbeiterID: Key
+        Gehalt
+        Kontonummer
+        Sozialversicherungsnummer
+	...
+    }
+
+
+{{< /mermaid >}}
+++++
+
+Mit einer solchen Aufteilung kannst du zum Beispiel schützenswerte Informationen über einen Mitarbeiter nur für bestimmte Zwecke freigeben.
+Soll zum Beispiel ein Mitarbeiter einen Newsletter an alle Mitarbeiter schicken, kannst du ihn nur für die Tabelle `Mitarbeiter` freigeben.
+Er sieht damit nicht automatisch das Gehalt von jedem Mitarbeiter.
+
+Wenn wir die beiden Primärschlüssel miteinander verbinden, entsteht eine "Eins zu Eins" Beziehung.
+Jede `MitarbeiterID`, die du aus der Tabelle `Mitarbeiter` auswählst wird auch nur einmal in der `MitarbeiterDetails` Tabelle gefunden
+
+== Die "Eins zu Mehreren" Beziehung
+
+Dies ist die am häufigsten genutzte Beziehung.
+
+++++
+{{< mermaid align="left">}}
+classDiagram
+    Kunden "1" --> "*" Bestellungen
+
+    class Kunden{
+	KundenID: Key
+	Vorname
+	Nachname
+	Adresse
+	...
+    }
+
+    class Bestellungen{
+        BestellungenID: Key
+        KundenID
+        Produkt
+        Preis
+	...
+    }
+
+
+{{< /mermaid >}}
+++++
+
+Wenn wir die beiden Tabellen über die Spalte `KundenID` verbinden, entsteht eine "Einz zu Mehreren" Verbindung.
+Wir hoffen natürlich, dass ein Kunde nicht nur eine, sondern mehrere Bestellungen bei uns tätigt.
+
+Jede `KundenID` kann mehrmals in der Tabelle `Bestellungen` stehen.
+Jeder Kunde kann also mehrere Bestellungen aufgeben.
+Aber, jede Bestellung kann maximal von einem Kunden getätigt werden.
+
+Setzen wir nun noch die `NOT NULL` Regel in der `Bestellungen` Tabelle auf der `KundenID` Spalte, dann muss für eine Bestellung immer auch ein Kunden eingetragen sein.
+
+== Die "Mehrere zu Mehrere" Beziehung
+
+Ein Schüler belegt mehrere Schulfächer.
+An einem Schulfach, einer Unterrichtsstunde, nehmen mehrere Schüler teil.
+
+Um diese Beziehung abzubilden, benötigen wir eine weitere Tabelle (Junction-Tabelle).
+
+++++
+{{< mermaid align="left">}}
+classDiagram
+    Schüler "1" --> "*" Einschreibungen
+    Schulfach "1" --> "*" Einschreibungen
+
+    class Schüler {
+	SchülerID: Key
+	Vorname
+	Nachname
+	Hauptfach
+	...
+    }
+
+    class Schulfach {
+        SchulfachID: Key
+        Lehrer
+        RaumNummer
+	...
+    }
+
+    class Einschreibungen {
+        EinschreibungID: Key
+        SchülerID
+        SchulfachID
+        Jahrgangsstufe
+	...
+    }
+
+{{< /mermaid >}}
+++++
+
+
+Jeder Datensatz in der `Einschreibungen` Tabelle wird mit einem Schüler und einem Schulfach verknüpft.
+
+Jeder Schüler steht mehrmals in der `Einschreibungen` Tabelle und jedes Schulfach steht ebenfalls mehrmals in der Tabelle `Einschreibungen`.

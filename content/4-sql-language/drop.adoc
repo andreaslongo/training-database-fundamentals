@@ -1,0 +1,30 @@
+---
+title: "Der DROP Befehl"
+date: 2021-03-08
+draft: false
+weight: 5
+---
+
+Mit `DROP` kannst du existierende Objekte *löschen*.
+
+Du kannst damit nicht nur Spalten aus Tabellen entfernen, sondern auch ganze Tabellen oder sogar ganze Datenbanken löschen.
+Sei also vorsichtig mit diesem Befehl.
+
+== Eine Tabelle entfernen
+
+Öffne ein neues Query.
+
+[source]
+----
+USE [MeineNeueDatenbank]
+
+DROP TABLE MitarbeiterKopie;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du hast nun die Tabelle `MitarbeiterKopie` aus der Datenbank entfernt.
+
+Du kannst Objekte nur entfernen, wenn das Objekt keine *Abhängigkeiten* zu anderen Objekten mehr hat.
+Wenn du ein Objekt einmal nicht entfernen kannst, bekommst du eine Fehlermeldung mit dem genauen Grund dafür.
+Schaue dir dann die Ursache an und behebe das Problem.

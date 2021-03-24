@@ -1,0 +1,57 @@
+---
+title: "Regeln (Constraints)"
+date: 2021-03-08
+draft: false
+weight: 2
+---
+
+Wenn wir Regeln für Spalten unserer Tabellen festlegen, können wir sicherstellen, dass die Daten in unseren Tabellen immer so gespeichert werden, wie wir es vorgeben.
+
+In SQL Server können wir sogenannte *Constraints* festlegen.
+
+== Eine Constraint festlegen
+
+Wir möchten nun für unsere Tabelle `Bestellungen` festlegen, dass das `Bestelldatum` entweder der aktuelle Tag sein muss, oder in der Vergangenheit liegt.
+
+Damit stellen wir sicher, dass in einer Bestellung nicht fälschlicherweise ein Datum aus der Zukunft eingetragen ist.
+Wir können schließlich nicht vorhersehen, an welchem zukünftigen Tag jemand eine Bestellung tätigt.
+
+Öffne im Management Studio die Tabelle `Bestellungen`.
+Klicke mit der rechten Maustaste auf den Bereich `Constraints` und wähle `New Constraint...`
+Es öffnet sich ein neues Fenster in dem wir eine neue Constraint eintragen.
+
+Unter dem Punkt `Expression` tragen wir nun folgendes ein: `Datum <= GETDATE()`.
+Das bedeutet, in unserer Tabelle `Bestellungen` dürfen in die Spalte `Datum` nur Werte eingetragen werden, die kleiner sind als das Ergebnis von `GETDATE()`.
+`GETDATE()` ist eine Funktion, die beim Aufruf immer das aktuelle Datum als Ergebnis zurückgibt.
+
+Wir ändern nun noch den Namen der Constraint beim Punkt Identity (Name) auf: `CK_Bestellungen_Datum`, damit wir später genau wissen, wofür die Constraint gedacht ist.
+
+Speichere nun deine Änderungen.
+Du siehst jetzt die neue Constraint unter dem Punkt `Constraints` deiner Tabelle.
+
+Teste nun dein Constraint indem du versuchst einen Wert in der Spalte `Datum` deiner Tabelle zu ändern.
+
+== Einen Unique Index festlegen
+
+Mit einem *Unique Index* kannst du festlegen, dass alle Werte in einer Spalte *einzigartig* sein müssen.
+Es dürfen also keine doppelten Einträge gemacht werden.
+
+Wir möchten nun in unserer Tabelle `Mitarbeiter` festlegen, dass in der Spalte `Email` keine doppelten Email Adressen eingetragen werden dürfen.
+Dazu legen wir einen sogenannten *Unique Index* an.
+
+Öffne nun im Management Studio den `Designer` für die Tabelle `Mitarbeiter`.
+Klicke mit der rechten Maustaste auf eine freie Fläche des Designers und wähle `Indexes/Keys...` aus.
+Es öffnet sich ein neues Fenster in dem wir Keys und Indizes konfigurieren können.
+
+Wir sehen dort schon einen Eintrag `PK_Mitarbeiter`.
+Das ist unser früher festgelegte *Primary Key* auf der Spalte `MitarbeiterID`.
+
+Wir fügen nun mit `Add` einen neuen Index hinzu.
+Unter dem Punkt `(General)` ändern wir den Wert von `Is Unique` auf `Yes`.
+Bei `Columns` tragen wir die Spalte `Email` ein.
+Ändern noch den Namen des Indexes beim Punkt `Identity (Name)` auf: `UIX_Mitarbeiter_Email`, damit du ihn später wiederfindest.
+
+Schließe nun die Fenster und speichere die Einstellungen der Tabelle.
+Du siehst jetzt unter dem Punkt `Indexes` deiner Tabelle einen neuen Unique Index.
+
+Durch den Unique Index erlaubt es das Datenbanksystem nun nicht mehr, dass zwei Mitarbeiter dieselbe Email Adresse haben.

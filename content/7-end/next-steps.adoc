@@ -1,0 +1,49 @@
+---
+title: "Wie geht es weiter?"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+
+== Vielen Dank für deine Teilnahme :-)
+
+Wir sind damit am Ende unseres Kurses angelangt.
+Ich hoffe du hast viel Neues gelernt und fühlst dich nun gut gerüstet, für deine Arbeit mit Datenbanken.
+
+Wenn du Fragen hast oder wenn dich einfach etwas interessiert, darfst du dich gerne an mich wenden.
+Du erreichst mich am besten per Email.
+
+
+== Was kannst du tun?
+
+Wenn du dein Wissen vertiefen und weiter mit Datenbanken arbeiten möchtest, kannst du dir dein eigenes DBMS auf deinem Computer installieren.
+
+Du kannst dir dazu eine Version des Microsoft SQL Server Express kostenlos herunterladen.
+
+SQL Server Express ist sehr ähnlich zu dem, was du in diesem Kurs kennengelernt hast.
+Du kannst dich dann mit dem Management Studio zu deinem eigenen SQL Server Express verbinden und dir die Beispiele aus dem Kurs noch einmal in aller Ruhe anschauen.
+
+Experimentiere ruhig ein wenig und probiere neue, vielleicht auch eigene Sachen und Ideen aus.
+Das ist die beste Methode zum Lernen.
+
+Die Beispiele aus diesem Kurs findest du hier:
+
+- https://github.com/andreaslongo/training-database-fundamentals/tree/main/static/examples[Beispiele]
+
+Die `.sql` Dateien enthalten unsere SQL Abfragen.
+Du kannst sie dir im Management Studio anschauen.
+Die `.bak` Dateien enthalten Backups unserer Beispieldatenbanken.
+Diese kannst du als neue Datenbank auf deinem Server restoren.
+
+
+== Wie geht es mit diesem Kurs weiter?
+
+Dies ist die erste Version meines Kurses "Einstieg Datenbanken".
+Der Kurs wird von mir, mehr oder weniger regelmäßig, überarbeitet.
+Fehler werden korrigiert, Kapitel werden angepasst oder ergänzt oder es kommen neue Kapitel hinzu.
+
+Alle Änderungen findet du hier auf dieser Seite.
+Es kann sich also lohnen, wenn du ab und an vorbeischaust.
+
+Falls dir Fehler oder sonst etwas auffällt, freue ich mich über eine Kurze Nachricht von dir, damit ich diese korrigieren kann.

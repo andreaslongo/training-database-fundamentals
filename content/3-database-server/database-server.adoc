@@ -1,0 +1,64 @@
+---
+title: "Der Datenbankserver"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+Wenn wir mit Datenbanken arbeiten, reden wir oft vom *Datenbankserver*.
+Aber wozu brauchen wir diesen?
+
+== Was macht ein Datenbankserver?
+
+Ein Datenbankserver stellt unsere Datenbanken bereit, damit wir mit ihnen arbeiten können.
+
+Auf dem Datenbankserver läuft unsere *Database Management System (DBMS)* Software.
+Wenn wir ein DBMS installieren, erstellen wir damit eine sogenannte *Instanz*.
+Eine DBMS Installation ist also eine *Instanz* unseres Datenbanksystems.
+
+Ein Server kann *mehrere* DBMS Instanzen zeitgleich und unabhängig voneinander betreiben.
+Im der Regel installieren wir aber nur *eine Instanz* pro Server.
+
+Nachdem du eine Instanz installiert hast, kannst du dich über das Netzwerk mit dieser Instanz verbinden.
+
+- Du schickst *Befehle* an die Instanz.
+- Die Instanz *bearbeitet* die Befehle und sendet *Ergebnisse* an dich zurück.
+
+Auch alle anderen Benutzer deiner Datenbank verbinden sich über das Netzwerk mit der Instanz.
+Das sind die *Clients* deines Datenbanksystems.
+Jede Verbindung zu deinem Server ist eine Client-Verbindung.
+
+== Das Server System
+
+Wir können einen Datenbankserver auf einem *physikalischer* Server oder auf einem *virtuellen* Server betreiben.
+Beides hat seine Vor- und Nachteile und es kommt immer auf die aktuellen Situation an, welches die beste Lösung ist.
+
+Datenbankserver sollen oft *große Datenmengen* schnellstmöglich verarbeiten.
+Das stellt hohe Anforderungen an Hardware Ressourcen wie Prozessoren, Arbeitsspeicher und Festplattenspeicher.
+
+Für ein schnelles Datenbanksystem solltest du folgende Punkte beachten:
+
+- *Schnelle Festplatten* für Lese- und Schreibzugriffe
+- *Viel Arbeitsspeicher* um die Festplatten zu entlasten
+- *Mehrere Prozessoren* um viele Berechnungen gleichzeitig ausführen zu können
+- *Schnelle Netzwerkverbindung* um die Daten bereitzustellen
+
+Für sehr große Datenbanksysteme können einzelne Server zu einem *Cluster* gebündelt werden.
+Wir können damit die *Arbeitslast* auf mehrere Server aufteilen.
+Außerdem können wir damit eine *Ausfallsicherheit* erreichen.
+Einzelne Cluster Systeme können dabei an unterschiedlichen Orten, zum Beispiel in unterschiedlichen Rechenzentren stehen.
+
+== Dein eigener Datenbankserver
+
+Wenn du nach diesem Kurs noch weiter mit Datenbanken experimentieren möchtest, kannst du dir deinen eigenen Datenbankserver auf deinem Computer installieren.
+
+=== Microsoft SQL Server Express
+
+In diesem Kurs nutzen wir Microsoft SQL Server als unser DBMS.
+
+Die *SQL Server Express Edition* lässt sich auf fast jedem beliebigen Windows Computer installieren.
+Es sind nicht alle Funktionen der "größeren" Editionen enthalten.
+Dafür brauchst du für die Installation aber auch keine eigene Server Hardware.
+
+Die Express Edition ist trotzdem ein vollwertiges Datenbanksystem.
+Du kannst dir damit alle Beispiele aus diesem Kurs noch einmal selbst anschauen.

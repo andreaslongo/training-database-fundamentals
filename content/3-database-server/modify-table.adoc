@@ -1,0 +1,64 @@
+---
+title: "Tabelle anpassen"
+date: 2021-03-08
+draft: false
+weight: 7
+---
+
+:experimental:
+
+Du hast nun eine neue Tabelle in deiner Datenbank angelegt und diese mit Daten gefüllt.
+
+Jetzt möchtest du eine *neue Spalte* in diese Tabelle einfügen.
+Du änderst damit das *Design* der Tabelle.
+
+Designänderungen sind mit gewissen Gefahren verbunden, sofern die Datenbank schon von anderen Benutzern oder Systemen verwendet wird.
+Du solltest dabei also vorsichtig sein.
+
+Unsere Datenbank befindet sich jedoch noch im Aufbau.
+Du kannst also beliebig Änderungen machen.
+
+== Das Design einer Tabelle anpassen
+
+Klicke mit der rechten Maustaste auf die Tabelle `Produkte` und wähle `Design...`
+Du siehst nun eine ähnliche Ansicht wie beim Anlegen einer neuen Tabelle.
+
+=== Eine neue Spalte einfügen
+
+Füge jetzt eine neue Spalte `Beschreibung` mit dem DatenType `nvarchar(100)` hinzu.
+Schließe die Ansicht wieder und *speichere* deine Änderungen.
+
+[%header,format=csv, width=30%]
+|===
+Column Name,Data Type
+Beschreibung,nvarchar(100)
+|===
+
+Schau dir nun die Datensätze deiner Tabelle an (`Select Top 1000 Rows`).
+
+[%header,format=csv, width=35%]
+|===
+ProductID,ArtikelName,Zielgruppe,Preis,Beschreibung
+1,Pullover,U,35, NULL
+|===
+
+=== Die Reihenfolge der Spalten ändern
+
+Nun möchtest du die Spalten in deiner Tabelle in eine anderen *Reihenfolge* bringen.
+Du möchtest `Beschreibung` zwischen `Artikelname` und `Zielgruppe` stehen haben.
+
+- Öffne dazu wieder den `Designer` deiner Tabelle.
+- Klicke auf das Pfeilsymbol vor `Beschreibung`, halte die Maustaste gedrückt und ziehe den Eintrag zwischen `Artikelname` und `Zielgruppe`.
+- Schließe den Designer und speichere deine Änderungen.
+
+Du bekommst eine *Fehlermeldung*.
+
+Das Datenbanksystem muss für diese Änderung die gesamte Tabelle *löschen und neu anlegen* um die Spalten zu sortieren.
+Einen solchen Vorgang musst du explizit erlauben, denn das kann gefährlich sein für die Nutzer der Datenbank.
+
+Um diesen Vorgang zu erlauben, *deaktiviere* die folgende Einstellung im Management Studio:
+menu:Tools[Options... > Designers > Tables and Database Designers > Prevent saving changes that requires table re-creation]
+
+Du kannst nun die Spalten im Designer neu anordnen.
+Diesmal bekommst du keine Fehlermeldung beim speichern und deine Änderungen werden übernommen.
+Deine Tabelle wird dabei neu angelegt, die Datensätze bleiben jedoch erhalten.

@@ -1,0 +1,56 @@
+---
+title: "SQL Server Express installieren"
+date: 2021-03-08
+draft: false
+weight: 2
+
+hidden: true
+---
+
+//TODO Screenshots
+
+== Vorbereitung
+
+. Installiere alle Updates für dein Betriebssystem (`Windows Updates`)
+
+. Starte die Installation mit einem klick auf die SQL Server Datei, die du zur Vorbereitung auf diesen Kurs heruntergeladen hast.
+
+Es werden nun einige Dateien auf deinen Computer geladen. Wenn der Prozess abgeschlossen ist, siehst du ein neues Verzeichnis, welches eine `SETUP.exe` Datei enthält.
+
+== Installation
+
+Starte das *SQL Server Installation Center* mit einem Klick auf die `SETUP.exe`.
+
+. Klicke im Menü auf *Installation*
+
+. Wähle *New SQL Server stand-alone installation or add features to an existing installation* aus
+
+. Akzeptiere die *Lizenzverainbarungen*
+
+Das Setup zeigt dir jetzt eventuell fehlende Anforderungen an, die du erfüllen musst, bevor du die Software installieren kannst. Weitere Infos zu den Anforderungen zeigt dir das Setup.
+Sind alle Anforderungen erfüllt, kommst du zur *Feature Selection* Liste.
+
+. Wähle folgende *Features* aus
+
+- *Database Engine Services*
+- *Management Tools - Basic*
+- *Management Tools - Complete*
+
+. Im *Instance Configuration* Bildschirm, gib deiner Instanz den Namen `SQL`
+
+. *Server Configuration* -> Service Accounts, Collation
+. *Database Engine Configuration* -> Authentication Mode, `sa` account, Data Directories
+
+. Documentation Website
+. Installation Log Files
+
+////
+== Install SQL Server Managment Studio
+
+== Review installed utilities
+
+- SQL Server Configuration Manager
+- SQL Server Management Studio
+
+Im nächsten Abschnitt benutzen du das SQL Server Management Studio um dich mit deiner neuen SQL Instanz zu verbinden.
+////

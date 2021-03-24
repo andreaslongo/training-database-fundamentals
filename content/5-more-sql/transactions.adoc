@@ -1,0 +1,50 @@
+---
+title: "Transaktionen"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+In diesem Abschnitt beschäftigen wir uns mit SQL-Befehlen zum bearbeiten von *Datensätzen*.
+Diese Befehle basieren auf sogenannten *Transaktionen*.
+
+== Was sind Transaktionen?
+
+Zum Beispiel ist das *Hinzufügen* neuer Datensätze eine Transaktion.
+
+Eine Transaktion kann entweder *erfolgreich* sein (alles OK) oder *fehlschlagen*.
+Schlägt eine Transaktion fehl, dann macht das Datenbanksystem *alle* Änderungen innerhalb dieser Transaktion *rückgängig*.
+Das ist ein Sicherheitsmechanismus des Datenbanksystems um Probleme innerhalb einzelner Datensätze zu vermeiden.
+
+== Eine erfolgreiche Transaktion
+
+Stelle dir zum Beispiel vor, du möchtest einen neuen Kunden in deiner Tabelle `Kunden` erfassen.
+
+- Du startest damit eine Transaktion.
+- Die `Kundennummer` wird erfolgreich gespeichert.
+- Der `Vorname` wird erfolgreich gespeichert.
+- Der `Nachname` wird erfolgreich gespeichert.
+
+Damit ist der Datensatz komplett und die Transaktion erfolgreich abgeschlossen.
+
+== Eine fehlgeschlagene Transaktion
+
+Nun möchtest du einen weiteren Kunden hinzufügen.
+
+- Du startest damit eine weitere Transaktion.
+- Die `Kundennummer` wird erfolgreich gespeichert.
+- Der `Vorname` wird erfolgreich gespeichert.
+- Der `Nachname` kann nicht gespeichert werden, du bekommst eine Fehlermeldung.
+
+Damit du in einem solche Fall keine *unvollständigen* Datensätze in deiner Datenbank hast, macht das Datenbanksystem die komplette Transaktion *rückgängig*.
+`Kundennummer` und `Vorname` werden also wieder entfernt.
+Sonst hättest du einen Kunden in deiner Datenbank ohne `Nachnamen`.
+
+== Große und kleine Transaktionen
+
+Es gibt auch größere Transaktionen.
+Du könntest zum Beispiel 100 neue Kunden auf einmal eintragen.
+Kommt es bei einem dieser Kunden zu Problemen, wird auch hier die gesamte Transaktion rückgängig gemacht.
+
+Durch Transaktionen kannst du dir immer sicher darüber sein, was in deiner Datenbank gespeichert wird und was nicht.
+Es wird entweder *alles* gespeichert, oder im Fehlerfall *nichts*.

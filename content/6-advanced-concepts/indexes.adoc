@@ -1,0 +1,41 @@
+---
+title: "Indizes"
+date: 2021-03-08
+draft: false
+weight: 3
+---
+
+Ein *Index* oder mehrere *Indizes* beschleunigen das Suchen und Abfragen von Daten in deiner Datenbank.
+
+== Was ist ein Index?
+
+Du kannst dir das als eine Art Inhaltsverzeichnis wie in einem Buch vorstellen.
+Wenn du eine bestimmte Information in einem Buch ohne Inhaltsverzeichnis finden möchtest, musst du jede Seite einzeln anschauen, bis du die gewünschte Information gefunden hast.
+Im Inhaltsverzeichnis kannst du dir einfach und schnell die passende Seitenzahl heraussuchen und öffnest die Seite direkt.
+Ähnlich ist das auch bei Datenbanken.
+
+Wenn du eine Spalte als *Primary Key* festlegst, wird vom Datenbanksystem automatisch ein Index für diese Spalte angelegt.
+Dies erlaubt es dem System, schnell und effizient Beziehungen zwischen Tabellen abzurufen.
+
+Wir können aber auch eigene Indizes anlegen.
+Das ist immer dann sinnvoll, wenn du Daten aus bestimmten Spalten *oft* abfragen, suchen oder filtern möchtest.
+
+== Einen eigenen Index anlegen
+
+Wir legen nun einen neuen Index für unsere `Kunden` Tabelle an.
+
+Öffne im Management Studio die Tabelle `Kunden`.
+Klicke mit der rechten Maustaste auf den Punkt `Indexes` und wähle `New Index > Non-Clustered Index...`.
+Es öffnet sich ein neues Fenster in dem wir den Index anlegen können.
+
+Füge nun zuerst eine `Index Key` Spalte mit *Add...* hinzu.
+Wähle die Spalte `Nachname` aus und bestätige mit *OK*.
+
+Ändern den Namen des Indexes beim Punkt `Index name` auf: `IX_Kunden_Nachname`, damit du ihn später wiederfindest.
+
+Speichere deine Änderungen mit *OK*.
+Du siehst jetzt einen neuen Index unter `Indexes`.
+
+Der Index wird nun Suchen und Abfragen mit der Spalte `Nachname` erheblich beschleunigen.
+Unsere Beispieldatenbank ist noch sehr klein, du wirst hier also noch nicht direkt etwas von dieser Verbesserung merken.
+Aber, wenn deine Datenbank einmal größer wird und du darin hunderte, tausende oder mehr Kunden gespeichert hast, wirst du den Effekt deutlich spüren.

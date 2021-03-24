@@ -1,0 +1,24 @@
+---
+title: "Eine neue Datenbank erstellen"
+date: 2021-03-08
+draft: false
+weight: 5
+---
+
+:experimental:
+
+Nachdem wir eine bestehende Datenbank in die Instanz importier haben, wollen wir nun eine brandneue eigene Datenbank anlegen.
+
+== Eine neue Datenbank erstellen
+
+Klicke im *Object Explorer* mit der rechten Maustaste auf menu:Databases[New Database...].
+
+. Gib der neuen Datenbank einen *Namen* mit dem Feld *Database name*
+. Erstelle die Datenbank mit einem Klick auf *OK*
+
+Wenn du eine Datenbank anlegst werden typischerweise zwei neue Dateien auf deiner Festplatte angelegt.
+
+- Eine Datei enthält die eigentlichen *Daten* deiner Datenbank (`File Type: ROWS Data`).
+- Die andere Datei enthält die *Transaktions-Logs* der Datenbank (`File Type: LOG`).
+
+Was *Transaktionen* sind, werden wir später noch erfahren.

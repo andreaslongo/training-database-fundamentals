@@ -1,0 +1,52 @@
+---
+title: "Der UPDATE Befehl"
+date: 2021-03-08
+draft: false
+weight: 4
+---
+
+Mit `UPDATE` kannst du Datensätze in einer Tabelle *ändern*.
+
+== Einen Datensatz ändern
+
+Wir möchten nun einen Datensatz in der Tabelle `Mitarbeiter` ändern.
+
+Öffne ein neues Query.
+
+Ändere nun die Email Adresse von Martin Hofer von `mhofer@example.com` auf `itsupport@example.com`
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+UPDATE Mitarbeiter
+SET Email = 'itsupport@example.com'
+WHERE Email = 'mhofer@example.com';
+----
+
+Beachte die `WHERE` Klausel.
+Ohne diesen Filter würdest du alle Email Adressen in deiner Tabelle auf `itsupport@example.com` ändern.
+Mit `WHERE` legst du den genauen Datensatz fest, den du ändern möchtest.
+
+Du hast nun die Email von Martin Hofer geändert.
+Lasse dir die Datensätzen mit `SELECT` anzeigen.
+
+== Mehrere Datensätze ändern
+
+Es kann ab und an nützlich sein, wenn du `UPDATE` Befehle ohne `WHERE` schreibst.
+Zum Beispiel dann, wenn du eine neue Spalte mit demselben Anfangswert befüllen möchtest.
+
+[source]
+----
+ALTER TABLE Mitgarbeiter
+ADD Teilzeit char(4);
+
+SELECT *
+FROM Mitarbeiter;
+
+UPDATE Mitarbeiter
+SET Teilzeit = 'nein';
+----
+
+Damit fügst du eine neue Spalte `Teilzeit` ein und befüllst diese für jeden Datensatz mit dem Anfangswert `nein`.
+Lasse dir nun die Datensätzen mit `SELECT` anzeigen.

@@ -1,0 +1,37 @@
+---
+title: "Namenskonventionen"
+date: 2021-03-08
+draft: false
+weight: 4
+---
+
+Bevor du neue Datenbanken erstellst, ist es wichtig, dass du dir zunächst ein paar Gedanken über sinnvolle *Namen* für deine *Objekte* (Datenbank, Tabellen, Spalten, ...) machst.
+Du erleichterst dir damit das Schreiben von SQL Abfragen und die gesamte Arbeit mit Datenbankobjekten.
+
+== Beispiele
+
+Hier sind einige Beispiele, die dir dabei als Orientierung dienen sollen:
+
+- Nutze *keine Leerzeichen* und *keine Sonderzeichen*.
+Beispiel: `EmailAdresse`, nicht `E-Mail Adresse`
+
+- Nutze `PascalCase` für die Namen deiner Objekte und halte dich *konsequent* daran.
+Beispiel: `KundenNummer` oder `kundenNummer`, nicht `kundennummer` oder `KUNDENNUMMER`
+
+- Nutze entweder Plural oder Singular für deine Namen, aber *nicht beides* zusammen.
+Beispiel: Entweder Tabelle `Produkte`, `Kunden` oder Tabelle `Produkt`, `Kunde`, aber nicht Tabelle `Produkt`, `Kunden`.
+
+- Nutze *keine reservierte Namen* wie zum Beispiel SQL-Befehle.
+Beispiel: Nenne deine Tabelle nicht `Select` und deine Spalte nicht `Create`
+
+- Namen von Tabellen sollten ihren *Inhalt* widerspiegeln, *aussagekräftig* und *einzigartig* in der Datenbank sein
+Beispiel: Nenne deine Tabelle `Mitarbeiter` nicht `Personen`
+
+== Die Goldene Regel
+
+Für welche Namen du dich auch immer entscheidest:
+
+*Entscheide dich einmal für eine Konvention und bleibe dann konsequent dabei.*
+
+Das erleichter nicht nur dir selbst die Arbeit.
+Du hilfst damit auch anderen.

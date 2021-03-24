@@ -1,0 +1,12 @@
+---
+title: "Datenbank löschen"
+date: 2021-03-08
+draft: false
+weight: 8
+---
+
+Um eine Datenbank zu löschen, klicke mit der Rechten Maustaste auf den Namen der Datenbank und wähle *Delete* aus.
+Im folgenden Fenster solltest du noch `Close existing connections` *aktivieren*.
+
+Eine Datenbank kann erst gelöscht werden, wenn keine Verbindungen mehr auf die Datenbank bestehen.
+Das können zum Beispiel andere Benutzer sein, die die Datenbank verwenden.

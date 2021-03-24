@@ -1,0 +1,60 @@
+---
+title: "Der DELETE Befehl"
+date: 2021-03-08
+draft: false
+weight: 5
+---
+
+Mit `DELETE` kannst du Datensätze aus einer Tabelle *löschen*.
+
+Du hast bereits den Befehl `TRUNCATE` kennengelernt, mit dem du *alle* Datensätze aus einer Tabelle entfernen kannst.
+
+Mit dem `DELETE` Befehl kannst du *einzelne* Datensätze aus einer Tabelle löschen.
+Der Unterschied zwischen dem `DELETE` und dem `TRUNCATE` Befehl ist, dass du mit `DELETE` den `WHERE` Filter nutzen kannst um genau zu bestimmen, welche Datensätze gelöscht werden sollen.
+
+== Datensätze löschen
+
+Öffne ein neues Query.
+
+Entferne zuerst die gesamte Tabelle `KundenKopie` und erstelle sie erneut aus der Tabelle `Kunden`
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+DROP TABLE KundenKopie;
+
+SELECT *
+INTO KundenKopie
+FROM Kunden;
+----
+
+Lasse dir die Datensätze der Tabelle mit `SELECT` anzeigen.
+
+[source]
+----
+SELECT *
+FROM KundenKopie
+----
+
+Lösche den Datensatz des Kunden mit der ID `5` aus der Tabelle
+
+[source]
+----
+DELETE
+FROM KundenKopie
+WHERE KundenID = 5
+----
+
+Lasse dir die Datensätze der Tabelle mit `SELECT` anzeigen.
+
+Lösche nun alle Kunden mit einer ID größer als `6`.
+
+[source]
+----
+DELETE
+FROM KundenKopie
+WHERE KundenID > 6
+----
+
+Lasse dir die Datensätze der Tabelle mit `SELECT` anzeigen.

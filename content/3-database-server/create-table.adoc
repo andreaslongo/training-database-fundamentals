@@ -1,0 +1,88 @@
+---
+title: "Eine Tabelle erstellen"
+date: 2021-03-08
+draft: false
+weight: 6
+---
+
+:experimental:
+
+Deine neue Datenbank enthält noch keine Daten.
+Doch bevor du Daten speichern kannst, musst du zuvor *Strukturen* für deine Daten schaffen.
+
+== Eine Tabelle anlegen
+
+Wir erstellen also zuerst eine Tabelle.
+
+Klicke im *Object Explorer*, unter der neuen Datenbank, mit der rechten Maustaste auf menu:Tables[Table...]
+
+=== Eine Spalte hinzufügen
+
+Im folgenden Fenster legst du nun die *Spalten* für deine Tabelle fest.
+Jede Spalte bekommt einen *Namen* und einen *Datentyp*.
+
+Definiere nun eine neue Spalte `ProduktID`:
+
+[%header,format=csv, width=30%]
+|===
+Column Name,Data Type
+ProduktID,int
+|===
+
+=== Den Schlüssel festlegen
+
+Die Spalte `ProduktID` soll dein *Primärschlüssel (Primary Key)* für diese Tabelle sein.
+Zur Erinnerung, der *Schlüssel* dient dazu, jeden Datensatz in der Tabelle eindeutig identifizieren zu können.
+
+Klicke mit der rechten Maustaste auf `ProduktID` und wähle `Set Primary Key` aus.
+Die Spalte ist nun als Schlüssel hinterlegt.
+
+=== Eine Regel für die Spalte festlegen
+
+Nun möchten wir eine *Regel* für die neue Spalte festlegen.
+
+Suche dazu im unteren Teil des Fensters (`Column Properties`) den Eintrag `Identity Specification` und ändere den Wert von `(is identity)` auf `Yes`.
+
+Diese Regel ist speziell für *ID Spalten (Identity)* gedacht.
+Damit musst du deine ID Spalte nicht händisch pflegen.
+Für jeden neuen Datensatz, den du in der Tabelle speicherst, wird automatisch eine neue ID Nummer in der Spalte `ProduktID` erzeugt.
+
+=== Weitere Spalten hinzufügen
+
+Füge nun folgende weitere Spalten hinzu.
+
+[%header,format=csv, width=40%]
+|===
+Column Name,Data Type,AllowNulls
+ProduktID,int,
+ArtikelName,nvarchar(100),
+Zielgruppe,char(1), x
+Preis,money,
+|===
+
+Speichere die Tabelle unter dem Namen `Produkte`.
+
+Du kannst deine neue Tabelle nun im *Object Explorer* sehen.
+Falls nicht, klicke mit der rechten Maustaste auf `Tables` und dann auf `Refresh`.
+
+*Refresh* kann bei vielen Aktionen notwendig sein.
+Wundere dich also nicht, falls du Objekte nicht sofort siehst.
+Klicke einfach auf `Refresh` oder nutze die *F5* Taste.
+
+== Einen Datensatz in die Tabelle eintragen
+
+Klicke mit der rechten Maustaste auf die neue Tabelle `Produkte` und wähle *Edit Top 200 Rows*.
+Du kannst nun Daten in die Tabelle eintragen.
+
+In die Spalte `ProduktID` kannst du nicht selbst etwas eintragen.
+Unsere vorher eingestellte Regel sorgt dafür, dass die Spalte automatisch befüllt wird.
+
+Trage nun drei Datensatz für neue Produkte in deine Tabelle ein.
+
+[%header,format=csv, width=40%]
+|===
+ProductID,ArtikelName,Zielgruppe,Preis
+,T-Shirt,M,25
+,Hose,W,40
+,Pullover, ,35
+|===

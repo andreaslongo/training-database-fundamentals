@@ -1,0 +1,136 @@
+---
+title: "Der SELECT Befehl"
+date: 2021-03-08
+draft: false
+weight: 2
+---
+
+
+Mit `SELECT` kannst du Datensätze aus einer Tabelle *abfragen*.
+
+Der Hauptgrund, warum wir Daten in einer Datenbank speichern ist, dass wir hinterher schnell und einfach Daten daraus abfragen können.
+
+Wir möchten verschiedene Datensätze kombinieren um spezielle Fragen zu beantworten wie zum Beispiel "Wie viele rote Pullover wurden im letzten Jahr an Kunden aus Salzburg verkauft?".
+Du kannst deine Abfragen auf vielfältige und flexible weisen filtern um genau die Daten zu bekommen, die du benötigst.
+
+`SELECT` ist damit der am meisten verwendete SQL-Befehl.
+
+== Datensätze abfragen
+
+=== Eine Spalte abfragen
+
+Öffne ein neues Query.
+
+Frage nun eine Spalte aus deiner Tabelle ab.
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+SELECT Artikel
+FROM ProduktListe;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du siehst nun die Einträge aus der Spalte `Artikel`
+
+=== Mehrere Spalten abfragen
+
+Frage nun mehrere Spalten auf einmal ab.
+
+[source]
+----
+SELECT Artikel, Beschreibung
+FROM ProduktListe;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du siehst nun die Einträge aus der Spalte `Artikel` und `Beschreibung`
+
+=== Alle Spalten abfragen
+
+Frage nun alle Spalten der Tabelle auf einmal ab.
+
+[source]
+----
+SELECT *
+FROM ProduktListe;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du siehst nun die Einträge aller Spalten aus der Tabelle.
+
+== Ergebnisse anpassen
+
+Du kannst die Namen der Spalten in deiner Ergebnisliste anpassen.
+
+[source]
+----
+SELECT Artikel AS [Der Artikelname], Beschreibung AS [Die Artikelbeschreibung]
+FROM ProduktListe;
+----
+
+
+Prüfe die Abfrage und führe sie aus.
+
+Du siehst nun die Einträge aller Spalten aus der Tabelle.
+Die Spalten in den Ergebnissen haben andere Namen.
+
+
+== Die WHERE Klausel
+
+Mit der `WHERE` Klausel kannst du Datensätze in deiner Abfrage *filtern*.
+
+Mit `WHERE` kannst du *Kriterien* festlegen, die deine Datensätze erfüllen müssen um weiter verarbeitet zu werden.
+Du kannst damit zum Beispiel Änderungen an deinen Datensätze sehr genau steuern.
+
+Zum Beispiel kannst du eine Anweisung schreiben: "Ändere den Preis für Produkt `Pullover`, aber nur, wenn dessen Farbe `rot` ist."
+
+=== Datensätze filtern
+
+In den bisherigen `SELECT` Abfragen hast du immer alle Datensätze deiner Tabelle als Ergebnis zurückbekommen.
+Jetzt möchten wir nur bestimmte Datensätze sehen.
+
+==== Produkte mit niedrigen Preisen anzeigen
+
+Du filterst also deine Ergebnisse mit Hilfe der `WHERE` Klausel.
+
+[source]
+----
+SELECT Artikel, Beschreibung, Preis
+FROM ProduktListe
+WHERE Preis < 50;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du siehst nun alle Datensätzen bei denen der Preis niedriger als 50 ist.
+
+==== Ein bestimmtes Produkt anzeigen
+
+Jetzt möchtest du alle Details eines bestimmten Produkts sehen.
+
+[source]
+----
+SELECT *
+FROM ProduktListe
+WHERE ProduktID = 5;
+----
+
+Du siehst nun alle Spalten des Produkts mit der `ProduktID = 5`.
+
+==== Produkte mit anzeigen, die mit `P` anfangen
+
+Nun lasse dir alle Artikel anzeigen, die mit dem Buchstaben `P` anfangen.
+
+[source]
+----
+SELECT *
+FROM ProduktListe
+WHERE Artikel LIKE 'P%';
+----
+
+Du siehst nun alle Artikel, die mit `P` anfangen.

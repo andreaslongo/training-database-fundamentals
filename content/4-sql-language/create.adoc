@@ -1,0 +1,88 @@
+---
+title: "Der CREATE Befehl"
+date: 2021-03-08
+draft: false
+weight: 2
+---
+
+:experimental:
+
+Mit `CREATE` kannst du neue Objekte *erstellen*.
+
+== Eine Tabelle erstellen
+
+Du kannst zum Beispiel eine neue Tabelle in deiner Datenbank anlegen.
+
+Öffne im Management Studio deine Datenbank, suche dir eine Tabelle aus und starte den Designer.
+Du siehst das Design der Tabelle.
+
+=== Beispiel Tabelle
+
+.Mitarbeiter (Tabelle)
+[%header,format=csv, width=45%]
+|===
+Column Name,Data Type,AllowNulls
+MitarbeiterID,int,
+Vorname,nvarchar(50),
+Nachname,nvarchar(50),
+Job,nvarchar(50),x
+Email,nvarchar(50),
+|===
+
+Die Spalte `MitarbeiterID` ist hier als *Identity Feld* konfiguriert (`Identity Specification: yes`), damit die Spalte automatisch mit ID Nummern befüllt wird.
+Diese Spalte ist außerdem unser *Primärschlüssel (Primary Key)*.
+
+Wir wollen nun die gleiche Tabelle mit *SQL Anweisungen* erstellen anstatt mit dem Designer.
+
+=== SQL Anweisungen
+
+Klicke dazu im Management Studio auf *New Query* um eine neue *Abfrage* zu öffnen.
+Es erscheint nun ein Editor Fenster.
+Schreibe dort den den folgenden SQL Code hinen.
+
+[source]
+----
+CREATE TABLE MitarbeiterKopie (
+    MitarbeiterID int IDENTITY (1,1) NOT NULL,
+    Vorname nvarchar(50) NOT NULL,
+    Nachname nvarchar(50) NOT NULL,
+    Job nvarchar(50) NULL,
+    Email nvarchar(50) NOT NULL
+);
+----
+
+=== Bevor du SQL Anweisungen ausführst...
+
+...solltest du *immer* folgende Punkte beachten:
+
+- Stelle sicher, dass du mit der *richtige Datenbank* verbunden bist.
+Du erkennst das in der *Statusleiste* deiner Abfrage.
+Du siehst die aktive Datenbank auch in einem Drop-Down Feld.
+Dort kannst du die Verbindung bei Bedarf ändern.
+
+- Lasse deine *Abfrage prüfen*.
+Klicke dazu auf das Symbol mit dem grünen Haken oder nutze die Tasten kbd:[STRG + F5]
+
+=== Die SQL Anweisung auführen
+
+Wenn du mit der richtigen Datenbank verbunden bist und du deine Abfrage geprüft hast, *starte* die Abfrage mit einem Klick auf *Execute*.
+
+Du hast nun eine neue Tabelle erstellt.
+
+
+
+
+== Eine neue Datenbank anlegen
+
+Mit `CREATE` kannst du auch eine komplett neue Datenbank anlegen.
+
+Öffne im Management Studio ein neues Query und schreibe Folgendes in den Editor:
+
+[source]
+----
+CREATE DATABASE MeineNeueDatenbank;
+----
+
+*Prüfe* nun deine Abfrage und *starte* sie.
+
+Du hast nun eine neue Datenbank erstellt.

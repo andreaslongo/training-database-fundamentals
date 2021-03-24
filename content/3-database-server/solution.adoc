@@ -1,0 +1,32 @@
+---
+title: "Lösung"
+date: 2021-03-08
+draft: false
+weight: 12
+---
+
+== Erstelle deine eigene Datenbank
+
+Datenbank: `MyBooks`
+
+*Tabelle*
+
+.BookLocations
+[%header,format=csv, width=40%]
+|===
+Column Name,Data Type,Allow Nulls
+Title,nvarchar(100),
+Author,nvarchar(50),
+BookcaseLocation,nvarchar(50),
+ShelfNumber,int,
+|===
+
+*Datensätze*
+
+.BookLocations
+[%header,format=csv, width=35%]
+|===
+Title,Author,BookcaseLocation,ShelfNumber
+Maphead,Ken Jennings,Office Left,2
+The Bone Clocks,David Mitchell,Nightstand,1
+|===

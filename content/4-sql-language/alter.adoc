@@ -1,0 +1,68 @@
+---
+title: "Der ALTER Befehl"
+date: 2021-03-08
+draft: false
+weight: 4
+---
+
+Mit `ALTER` kannst du existierende Objekte *ändern*.
+
+== Eine Spalten in eine Tabelle einfügen
+
+Mit `ALTER` und `ADD` kannst du zum Beispiel eine neue Spalte in eine Tabellen *einfügen*.
+
+Öffne dazu ein neues Query.
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+ALTER TABLE MitarbeiterKopie
+    ADD Gehalt money;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du siehst nun die neue Spalte `Gehalt` in der Tabelle `MitarbeiterKopie`.
+
+== Mehrere Spalten einfügen
+
+Du kannst auch mehrere Spalten auf einmal hinzufügen.
+
+[source]
+----
+USE [MeineNeueDatenbank];
+
+ALTER TABLE MitarbeiterKopie
+    ADD ZweiterVorname nvarchar(50),
+        BonusProzent int,
+        LeistungsBewertung int
+;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du hast nun drei weitere Spalten in die Tabelle eingefügt.
+
+
+== Spalten aus aus einer Tabellen entfernen
+
+Mit `ALTER` und `DROP COLUMN` kannst du Spalten aus Tabellen *entfernen*.
+
+Öffne ein neues Query.
+
+[source]
+----
+USE [MeineNeueDatenbank]
+
+ALTER TABLE MitarbeiterKopie
+    DROP COLUMN Gehalt,
+                ZweiterVorname,
+		BonusProzent,
+		Leistungsbewertung
+;
+----
+
+Prüfe die Abfrage und führe sie aus.
+
+Du hast nun die Spalten aus deiner Tabelle entfernt.
