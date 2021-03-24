@@ -15,7 +15,7 @@ params:
   disableNextPrev: false
   disableInlineCopyToClipBoard: true
   showVisitedLinks: true
-  disableMermaid: true
+  disableMermaid: false
   disableShortcutsTitle: true
 
 menu:
