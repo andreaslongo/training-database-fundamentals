@@ -1,0 +1,58 @@
+---
+title: "Das Datenbanksystem"
+date: 2021-03-08
+draft: false
+weight: 2
+---
+
+Ein *Datenbanksystem* besteht aus zwei Komponenten:
+
+- eine oder mehrere *Datenbanken*
+- eine Verwaltungssoftware, das  *Database Management System (DBMS)*
+
+Das *Database Management System (DBMS)* ist ein Programm zum Erstellen und Verwalten von *Datenbanken*.
+
+Zum Vergleich: Microsoft Excel ist ein Programm zum Erstellen und Verwalten von Kalkulationstabellen.
+
+Ein DBMS stellt dir einen hoch-strukturierten und effizienten *Speichermechanismus* für deine Daten zur Verfügung.
+
+Vielleicht hast du schon einmal von den verschiedenen *SQL basierten DBMS* gehört.
+Zu den populärsten gehören MySQL, PostgreSQL, SQLite, und Microsoft SQL Server.
+All diese Systeme sind mit dem *SQL Standard* konform, den du später noch kennenlernen wirst.
+
+== Funktionen eines DBMS
+
+Ein DBMS hilft dir bei diesen Aufgaben.
+
+. Festlegen von *Strukturen* und *Regeln* für deine Daten
+
+- Du legst Strukturen und Regeln fest, an die sich deine Daten halten müssen.
+- Das DBMS sorgt dafür, dass diese Strukturen und Regeln eingehalten werden.
+
+. *Erfassen* von Daten
+
+- Du speicherst Daten in der vorgegebenen Struktur.
+- Das DBMS sorgt dafür, dass die Daten organisiert und konsistent in der Datenbank gespeichert werden.
+
+. *Abrufen* von Daten
+
+- Du rufst Daten aus deiner Datenbank ab.
+- Das DBMS sorgt dafür, dass du deine Daten schnell und zuverlässig abrufen kannst.
+
+. *Schützen* von Daten
+
+- Du möchtest deine Daten vor unberechtigten Zugriffen schützen.
+- Das DBMS steuert Zugriffe über Benutzer (Logins) und deren Berechtigungen.
+- Du möchtest deine Daten vor Verlust und Zerstörung schützen.
+- Das DMBS bietet dir Wartungs- und Sicherungsfunktionen (Backups) dafür an.
+
+
+== Microsoft SQL Server
+
+In diesem Kurs nutzen wir *Microsoft SQL Server* als unser DBMS.
+
+SQL Server ist ein zuverlässiges DBMS und wird seit vielen Jahren von kleinen bis großen Unternehmen genutzt.
+Es ist eines der DBMS Systeme, die am besten mit Microsoft Windows kompatibel sind.
+
+Im weiteren Verlauf des Kurses wirst du mit Hilfe des DBMS *Strukturen* und *Regeln* für deine Daten festlegen.
+Du wirst Daten in einer Datenbank *speichern* und lernen, wie du Daten aus der Datenbank *abrufen* kannst.

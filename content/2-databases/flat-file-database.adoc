@@ -1,0 +1,47 @@
+---
+title: "Flatfile Datenbank"
+date: 2021-03-08
+draft: false
+weight: 3
+---
+
+Schauen wir uns nun unsere erste konkrete Form einer Datenbank an -- die *Flatfile Datenbank*.
+
+Eine Flatfile Datenbank ist eine einfache Datenstruktur, die meist *ohne DBMS* eingesetzt wird.
+Es werden *Strukturen* und *Regeln* für Daten festgelegt.
+Die Daten werden dann in einer einfachen *Textdatei (Flatfile)* gespeichert.
+
+*Comma-separated values (CSV)* Dateien sind beliebte Flatfile Datenbanken.
+Vielleicht hast du schon einmal eine solche `.csv` Datei gesehen.
+
+
+== Struktur einer Flatfile Datenbank
+
+Eine Flatfile Datenbank besteht aus...
+
+- einer einfachen *Tabelle*
+- mit *Zeilen (Rows)* und *Spalten (Columns/Fields)*.
+- Zeilen speichern *Datensätze* zu einem einzelnen *Objekt*, zum Beispiel eine Person.
+- Spalten speichern die *Attribute* des Objektes, zum Beispiel die Adresse einer Person.
+
+*Flatfile Datei (CSV)*
+
+Eine Flatfile Datenbank Datei `beispiel.csv` sieht zum Beispiel so aus:
+
+----
+Name,Adresse
+Andreas,Hauptstraße 17 Wals-Siezenheim Salzburg 5071
+Peter,Maria-Theresien-Straße 18 Innsbruck Tirol 6020
+Michael,Hauptstraße 1 Linz Oberösterreich 4041
+Wolfgang,Dorfplatz 1 Fuschl am See Salzburg 5330
+----
+
+Die *Trennzeichen (Delimiter)*, hier ein Komma (`,`),  markieren die einzelnen *Spalten* der Tabelle.
+Wir haben hier also eine *Tabelle* mit den *Spalten* `Name` und `Adresse`.
+Und wir haben vier *Datensätze*, die Daten von vier Personen, eingetragen.
+
+== Was ist ein Datensatz?
+
+Ein *Datensatz* ist eine konkrete Kombination von *Attributwerten*.
+Zum Beispiel ist die folgende Zeile `Andreas,Hauptstraße 17 Wals-Siezenheim Salzburg 5071` aus unsere Tabelle ein Datensatz.
+Dieser Datensatz besteht aus den *Werten* der *Attribute* `Name` und `Adresse`.

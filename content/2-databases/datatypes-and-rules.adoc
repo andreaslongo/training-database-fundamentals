@@ -1,0 +1,65 @@
+---
+title: "Datentypen und Regeln"
+date: 2021-03-08
+draft: false
+weight: 8
+---
+
+Bevor du nun dein neues Wissen in die Praxis umsetzen kannst, solltest du noch zwei wichtige Konzepte kennenlernen.
+
+== Datentypen
+
+*Datentypen* sind ein grundlegender Bestandteil jedes Computersystems.
+In der ein oder anderen Form begegnen sie dir überall, zum Beispiel bei Programmiersprachen oder auch bei Datenbanken.
+
+Mit einem Datentypen beschreiben wir die Art, also den *Typ* eines *Datenwertes*.
+Wir legen beispielsweise fest, dass der Wert `Salzburg` ein Text ist und der Wert `1000` eine Zahl.
+
+Hier ein paar Beispiele geläufiger Datentypen:
+
+- Ganze Zahl: `int`
+- (Text) Zeichenkette: `char`
+- Datum: `date`
+- Währung: `money`
+- ...
+
+Datentypen legen also das *Format* eines *Wertes* fest.
+
+=== Datentypen in unseren Datenbanken
+
+In einer Tabelle legst du für jede *Spalte* einen *Datentyp* fest.
+
+Die Datentypen stellen sicher, dass Daten konsistent in die Tabelle eingegeben werden.
+Sie *schützen* dich damit vor der Eingabe falscher Daten.
+
+In eine Spalte mit dem Typ *Ganzzahl* `int` kannst du zum Beispiel nicht den *Namen* einer Person eingeben.
+Für den Namen einer Person benötigst du eine Spalte mit dem Datentyp *Variable Zeichenkette* `varchar`.
+
+Bevor du eine Spalten in einer Tabelle anlegst, musst du dir also zunächst Gedanken darüber machen, welche Art von Daten du in der Spalte speichern möchtest.
+
+Soll deine Spalte Nummern enthalten?
+
+- Möchtest du ganze Zahlen eintragen?
+- Möchtest du negative Zahlen eintragen?
+
+Soll deine Spalte Text enthalten?
+
+- Wie lang darf der Text sein?
+- Möchtest du Sonderzeichen wie `€` oder `ß` eintragen?
+
+Je nach Art der Daten benötigst du einen anderen Datentyp.
+Die Frage nach den Datentypen hilft dir dabei, eine gut strukturierte Datenbank aufzubauen.
+
+== Regeln
+
+Mit *Regeln (Constraints)* kannst du, zusätzlich zu den Datentypen, weitere Regeln festlegen, die deine Daten einhalten müssen, bevor sie in einer Tabelle gespeichert werden können.
+
+Du kannst zum Beispiel festlegen, dass es in einer Spalte *keine doppelten Einträge* geben darf.
+Constraints schützen dich damit, wie auch die Datentypen, vor der Eingabe falscher Daten.
+
+Hier einige Beispiele verschiedener Constraints:
+
+- `Unique constraints`: "Erlaube keine doppelten Werte in einer Spalte."
+- `Check constraints`: "Das Versanddatum darf nicht vor dem Datum einer Bestellung liegen."
+- `Default values`: Werte, die automatisch eingetragen werden, wenn kein anderer Wert angegeben ist. "In der Spalte `Land` soll zu Beginn immer `Österreich` stehen."
+- `NOT NULL constraint`: Darf der Wert einer Spalte leer sein oder muss er befüllt werden?

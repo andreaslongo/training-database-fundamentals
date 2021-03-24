@@ -1,0 +1,156 @@
+---
+title: "Relationale Datenbank"
+date: 2021-03-08
+draft: false
+weight: 5
+---
+
+Die *relationale Datenbank* ist das am häufigsten verwendete Modell zur Datenspeicherung.
+
+Eine relationale Datenbank vereint die Konzepte der *Flatfile Datenbank* mit Konzepten der *hierarchischen Datenbank*.
+
+== Struktur einer relationalen Datenbank
+
+Eine relationale Datenbank besteht aus...
+
+- *mehreren Tabellen*,
+- die in *Beziehungen* zueinander stehen,
+- hat jedoch *keine* Einschränkungen der Beziehungen.
+
+Damit können wir nun komplexere Beziehungen zwischen Daten abbilden.
+
+== Was ist eine Relation?
+
+Bei relationalen Datenbanken nutzen wir den Begriff *Relation* allgemein als Synonym für *Tabelle*.
+
+
+Eine *Relation* oder *Datenbankrelation* beschreibt *nicht* die Beziehungen der Tabellen untereinander.
+Das wird häufig verwechselt und ist auch in der Fachliteratur nicht immer eindeutig dargestellt.
+
+Falls du also einmal etwas über Relationen ließt, achte genau darauf, was der Autor meint.
+
+== Wie sieht eine relationale Datenbank aus?
+
+- Die *Daten* sind auf mehrere *themenspezifische* Tabellen aufgeteilt
+- Jede *Tabelle* beschreibt eine *Gruppe* von "Dingen"
+- Jeder *Datensatz* ist *eindeutig* durch einen *Schlüssel (Key)* identifizierbar
+
+Anstatt eine große Tabelle mit sehr vielen Spalten zu erstellen, werden die Daten auf mehrere Tabellen mit wenigen Spalten aufgeteilt.
+Mit Hilfe sogenannter *Schlüssel (Keys)* lassen sich *Datensätze* eindeutig identifizieren und Beziehungen zwischen einzelnen Tabellen und deren Datensätzen herstellen.
+
+== Schlüssel
+
+Schlüssel sind *Attributwerte*, die genutzt werden um *Datensätze* voneinander unterscheiden beziehungsweise diese eindeutig *identifizieren* zu können.
+Ein Schlüssel ist also eine *Spalte* oder eine *Gruppe* von Spalten in einer Tabelle, die so ausgewählt wird, dass jeder *Datensatz*, über die *Werte* dieser Gruppe einmalig ist.
+
+=== Ein Beispiel
+
+Nehmen wir als Beispiel eine Tabelle `Produkte`.
+
+.Produkte
+[%header, format=csv, width=20%]
+|===
+Artikel,Farbe
+T-Shirt,Rot
+T-Shirt,Grün
+Pullover,Rot
+Pullover,Grün
+|===
+
+Du siehst, dass sich die Datensätze weder über die Spalte `Artikel` noch über die Spalte `Farbe` eindeutig identifizieren lassen.
+Es gibt nun zwei einfache Möglichkeiten, wie du die eindeutige Identifizierbarkeit erreichen kannst.
+
+1. Durch eine *Kombination* der beiden Spalten.
+Es gibt nur einen `roten Pullover` und nur ein `rotes T-Shirt`.
+Die *Gruppe* der beiden Spalten `Artikel` und `Farbe` ist damit dein *Schlüssel*.
+Man nennt dies auch einen *kombinierten Schlüssel* oder *Verbundschlüssel*
+
+2. Indem du eine neue Spalte `Artikel ID` einfügst und dafür sorgst, dass die `IDs` eindeutig sind.
+Die Spalte `Artikel ID` ist damit dein *Schlüssel*.
++
+.Produkte
+[%header, format=csv, width=30%]
+|===
+Artikel ID,Artikel,Farbe
+1,T-Shirt,Rot
+2,T-Shirt,Grün
+3,Pullover,Rot
+4,Pullover,Grün
+|===
+
+
+Es kann auch sein, dass eine Spalte schon von natur aus immer eindeutige Werte beinhaltet.
+Zum Beispiel ist eine Sozialversicherungsnummer immer einmalig. Es gibt keine zweite Nummer mit demselben Wert.
+
+Hier einige weitere Beispiele von *Attributen*, deren *Werte* direkt als Schlüssel genutzt werden können.
+
+- Kontonummer bei einer Bank
+- ISBN-Nummer eines Buches
+- Artikelnummer von Produkten
+
+Jeder dieser *Attribute* repräsentiert eindeutig identifizierbare Daten.
+
+Ein Konto gehört zum Beispiel genau einer Person.
+Es gibt keine zweite Person mit derselben Kontonummer.
+Ein Buch hat genau eine ISBN-Nummer.
+Es gibt kein zweites Buch mit derselben ISBN-Nummer.
+
+== Beispiel einer relationale Datenbank
+
+Nehmen wir als Beispiel eine Tabelle (*Relation*), die unsere Kunden (*Objekte*) darstellt.
+
+In den Spalten erfasst du `Name` und `Adresse` zusammen mit allen weiteren Daten, die du benötigst (*Attribute*).
+Außerdem fügst du du noch eine `ID` Spalte ein, mit der du jeden Kunden eindeutig identifizieren kannst (*Schlüssel*).
+
+.Kunden
+[%header, format=csv, width=80%]
+|===
+Kunde ID,Name,Adresse, ...
+1,Andreas,Hauptstraße 17 Wals-Siezenheim Salzburg 5071,...
+2,Peter,Maria-Theresien-Straße 18 Innsbruck Tirol 6020,...
+3,Michael,Hauptstraße 1 Linz Oberösterreich 4041,...
+4,Wolfgang,Dorfplatz 1 Fuschl am See Salzburg 5330,...
+|===
+
+Nun legst du du noch eine weitere Tabelle an, die Produkte beinhaltet.
+Jedes Produkt ist ein eigener Datensatz und hat auch hier eine `ID` als Schlüssel.
+
+.Produkte
+[%header, format=csv, width=60%]
+|===
+Produkt ID,Produkt Name,Farbe, ...
+P01,T-Shirt,Rot,...
+P02,T-Shirt,Grün,...
+P03,T-Shirt,Blau,...
+P04,Pullover,Schwarz,...
+P05,Pullover,Grau,...
+|===
+
+Jetzt möchtest du gerne einen *Bestellvorgang* beschreiben.
+Ein Kunde kauft zum Beispiel ein Produkt und du möchtest die Daten später auf einer Rechnung ausgeben.
+
+Du legst nun eine weitere Tabelle an.
+Dort verknüpfst du die Datensätze aus den anderen Tabellen mit hilfe der Schlüssel miteinander.
+
+.Bestellungen
+[%header, format=csv, width=50%]
+|===
+Bestellung ID,Produkt ID,Kunde ID,...
+B01,P03,1,...
+B02,P04,2,...
+B03,P02,2,...
+B04,P05,4,...
+B05,P05,3,...
+|===
+
+Kannst du herausfinden...
+
+- wer die Rechnung für Bestellung 2 bekommt?
+- wie oft der graue Pullover bestellt worden ist?
+- welches Produkt Peter bei dir gekauft hat?
+
+Wenn du deine Daten auf diese Weise in getrennte Tabellen aufteilst, kannst du die Datensätze später flexibel und einfach kombinieren.
+Deine Daten lassen sich so auf fast jede beliebige Art neu darstellen.
+
+Du kannst so Fragen beantworten, die du heute noch nicht kennst.
+Zum Beispiel, in welchem Bundesland werden die meisten grauen Pullover gekauft?

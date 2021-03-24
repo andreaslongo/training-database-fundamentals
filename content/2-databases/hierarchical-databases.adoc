@@ -1,0 +1,76 @@
+---
+title: "Hierarchische Datenbank"
+date: 2021-03-08
+draft: false
+weight: 4
+---
+
+Du hast gesehen, dass eine Flatfile Datenbank aus einer Tabelle besteht.
+
+Eine *hierarchische Datenbank* besteht dagegen aus *mehreren* Tabellen, die in *Beziehungen* zueinander stehen.
+
+Die Beziehungen der einzelnen Tabellen sind in einer *Hierarchie* angeordnet.
+Das bedeutet, die Tabellen stehen in einer sogenannten *Eltern > Kind (Parent > Child)* Beziehung zueinander.
+
+== Struktur einer hierarchischen Datenbank
+
+Eine hierarchische Datenbank besteht aus...
+
+- *mehreren Tabellen*
+- die in *Beziehung* zueinander stehen.
+- Die Beziehungen sind immer *Parent > Child* Beziehungen.
+- Parent Tabellen können auf *mehrere* Child Tabellen verweisen.
+- Jede Child Tabelle hat *nur eine* Parent Tabelle.
+
+=== Beispiele
+
+Hier siehst du einige Beispiele für hierarchischer Strukturen.
+
+*Familienstammbaum*
+
+++++
+{{< mermaid align="left">}}
+graph TD
+    Eltern --- Kind-1 --- Enkelkind
+    Eltern --- Kind-2
+{{< /mermaid >}}
+++++
+
+
+*Organigramm eines Unternehmens*
+
+++++
+{{< mermaid align="left">}}
+graph TD
+    Geschäftsführer --- Abteilungsleiter-IT --- Teamleiter-IT --- Mitarbeiter-IT
+    Geschäftsführer --- Abteilungsleiter-Verkauf --- Teamleiter-Verkauf --- Mitarbeiter-Verkauf
+{{< /mermaid >}}
+++++
+
+
+*Ordnerstruktur eines Windows Dateisystems*
+
+++++
+{{< mermaid align="left">}}
+graph TD
+    C --- Windows --- System32
+    Windows --- Temp
+    C --- Users --- user1 --- Dokumente
+    Users --- administrator --- Desktop
+    C --- Programme --- SQL-Server
+    Programme --- Microsoft-Excel
+{{< /mermaid >}}
+++++
+
+Hierarchische Datenbanken zeigen dir, wie *Daten* in einem Gesamtsystem eingeordnet sind.
+Du kannst erkennen, welche Daten vor und nach einem Datensatz angeordnet sind und mit welchen anderen Daten er in Beziehung steht.
+
+Du kannst die *Beziehung* zwischen einzelnen *Tabellen* sehen indem du, ausgehend von einer Tabelle, den Baum nach oben gehst, bis du einen gemeinsamen Verwandten erreichst.
+Nun folgst du ausgehend vom gemeinsamen Verwandten einen anderen Zweig des Baumes nach unten zu weiteren Tabellen.
+
+== Grenzen hierarchischer Strukturen
+
+Mit hierarchischen Strukturen lassen sich nur einfache *Parent > Child* Beziehungen abbilden.
+Du kannst nur das Darunter und das Darüber darstellen.
+
+Alles, was du nicht gut in einem *Baumdiagramm* abbilden kannst, passt nicht in eine hierarchische Datenbank.

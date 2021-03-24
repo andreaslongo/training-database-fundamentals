@@ -1,0 +1,110 @@
+---
+title: "Normalisierung"
+date: 2021-03-08
+draft: false
+weight: 6
+---
+
+Die *Normalisierung* von Daten ist eine wichtige Grundlage zur Datenspeicherung.
+
+Unter *Normalisierung* versteht man das Aufteilen von *Attributen (Spalten)* in ihre kleinstmöglichen Teile.
+Die Abfragen von Datensätzen wird dadurch erleichtert oder oft auch damit überhaupt erst ermöglicht.
+
+== Ein Beispiel
+
+// TODO: Praxis Aufgabe?
+
+Angenommen du möchtest die Adressen von verschiedenen Kunden in einer *Flatfile* Datenbank speichern.
+
+.Die Adresse eines Kunden schaut zum Beispiel so aus:
+----
+Andreas
+Hauptstraße 17
+5071 Wals-Siezenheim
+Salzburg
+----
+
+== Entwurf
+
+Zuerst überlegst du dir eine sinnvolle *Struktur* für deine Daten.
+
+Eine Flatfile Datenbank besteht aus einer *Tabelle*.
+Das ist schon der erste Teil deiner Struktur.
+
+Dein *Objekt*, ist in diesem Beispiel ein *Kunde*.
+Jede *Zeile* deiner Tabelle soll also einen *einzelnen Kunden* darstellen.
+Das sind deine *Datensätze*.
+
+Die *Attribute* des Objekts sind in diesem Fall der *Name* und die *Adresse* eines Kunden.
+Deine Tabelle braucht also zwei *Spalten* für die Attribute `Name` und `Adresse`.
+
+Dein erster Entwurf der Tabelle schaut so aus:
+
+.Entwurf
+[%header, format=csv, width=50%]
+|===
+Name,Adresse
+Andreas,Hauptstraße 17 Wals-Siezenheim Salzburg 5071
+Peter,Maria-Theresien-Straße 18 Innsbruck Tirol 6020
+Michael,Hauptstraße 1 Linz Oberösterreich 4041
+Wolfgang,Dorfplatz 1 Fuschl am See Salzburg 5330
+|===
+
+Nun überlegst du dir, welche *Informationen* aus den Daten für dich nützlich sind.
+
+Es wäre zum Beispiel hilfreich, wenn du alle Kunden sehen könntest, die im *selben Bundesland* leben.
+Du möchtest also deine Datensätze (die Kunden) nach Bundesland *sortieren* oder *filtern*.
+
+Dir wird auffallen, dass dies nicht ganz einfach ist.
+Wie sollst du das Bundesland aus der Spalte `Adresse` herausbekommen?
+
+
+== Normalisierung
+
+Hier kommt nun die *Normalisierung* ins Spiel.
+
+Wenn du deine *Attribute* in weitere Spalten zerlegst, diese also *normalisierst*, wird das Sortieren nach Bundesland auf einmal sehr leicht.
+
+Du zerlegst also die Spalte `Adresse` in kleinere Bestandteile und bekommst so die neuen Spalten `Straße`, `Stadt`, `Bundesland` und `Postleitzahl`.
+
+.Normalisierung
+[%header,format=csv]
+|===
+Name,Straße,Stadt,Bundesland,Postleitzahl
+Andreas,Hauptstraße 17,Wals-Siezenheim,Salzburg,5071
+Peter,Maria-Theresien-Straße 18,Innsbruck,Tirol,6020
+Michael,Hauptstraße 1,Linz,Oberösterreich,4041
+Wolfgang,Dorfplatz 1,Fuschl am See,Salzburg,5330
+|===
+
+Durch die Normalisierung ist es nun sehr einfach, die Datensätze nach verschiedenen Kriterien zu *sortieren* und zu *filtern*.
+
+- Du möchtest nur Kunden aus dem Bundesland Salzburg sehen?
+Kein Problem, du *filterst* die Datensätze einfach über die Spalte `Bundesland`.
+
+- Du möchtest außerdem, dass Kunden mit der niedrigsten Postleitzahl immmer ganz oben in der Tabelle stehen?
+Auch das ist kein Probem.
+Du *sortierst* die Datensätze einfach mit der Spalte `Postleitzahl`
+
+.Gefiltert nach Bundesland Salzburg
+[%header,format=csv]
+|===
+Name,Straße,Stadt,Bundesland,Postleitzahl
+Andreas,Hauptstraße 17,Wals-Siezenheim,Salzburg,5071
+Wolfgang,Dorfplatz 1,Fuschl am See,Salzburg,5330
+|===
+
+Vermutlich hattest du schon oft unbewusst mit Normalisierung zu tun.
+Sie ist unter Anderem der Grund dafür, dass du zum Beispiel bei Online Bestellungen deine Adresse immer in getrennten Feldern eingeben musst.
+
+== Speichern
+
+Nun speicherst du deine Daten noch in einer Flatfile Datenbank im CSV Format: `beispiel_normalisiert.csv`
+
+----
+Name,Straße,Stadt,Bundesland,Postleitzahl
+Andreas,Hauptstraße 17,Wals-Siezenheim,Salzburg,5071
+Peter,Maria-Theresien-Straße 18,Innsbruck,Tirol,6020
+Michael,Hauptstraße 1,Linz,Oberösterreich,4041
+Wolfgang,Dorfplatz 1,Fuschl am See,Salzburg,5330
+----

@@ -1,0 +1,13 @@
+---
+title: "Datenbanken"
+date: 2021-03-08
+draft: false
+weight: 2
+
+chapter: true
+pre: "<b>1. </b>"
+---
+
+=== Modelle zur Speicherung von Daten
+
+= Datenbanken

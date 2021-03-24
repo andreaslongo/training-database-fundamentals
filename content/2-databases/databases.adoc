@@ -1,0 +1,78 @@
+---
+title: "Was sind Datenbanken?"
+date: 2021-03-08
+draft: false
+weight: 1
+---
+
+*Datenbanken* sind ein zentraler Bestandteil unseres modernen Lebens.
+Sie kommen überall dort zum Einsatz, wo *Informationen* jeglicher Art gespeichert und verarbeitet werden.
+Du nutzt täglich mehrere Datenbanken, ohne davon etwas zu merken.
+
+Datenbanken findest du beispielsweise...
+
+- in Rechenzentren
+- auf deinem Computer
+- auf deinem Smartphone
+- auf deinem Fernsehgerät
+- ...
+
+Aber was sind Datenbanken überhaupt und welche Vorteile bringen sie uns in der Welt der Datenverarbeitung?
+
+== Was sind Daten?
+
+In der Informatik und Datenverarbeitung verstehen wir unter Daten eine *digitale Repräsentation von Information*.
+
+Angenommen du schreibst dir eine Liste mit Filmen, die du dir gerne anschauen möchtest.
+Tust du das auf einem Blatt Papier, erzeugst du damit *analoge Daten*.
+Nutzt du deinen Computer und speicherst die Liste in eine Datei, dann erzeugst du *digitale Daten*.
+
+Du überlegst dir also, welche *Informationen* du für deine Liste benötigst, zum Beispiel den Titel des Films.
+Dann *digitalisierst* du diese Informationen aus deinem Kopf, indem du sie in einer Datei speicherst.
+Du erzeugst damit *Daten aus Informationen*.
+
+== Was ist eine Bank?
+
+Du bringst vermutlich dein Geld zu einer Bank.
+
+Die Bank sorgt dafür, dass das Geld auf deinem Konto...
+
+- *sicher verwahrt* ist,
+- du es *jederzeit abrufen* kannst,
+- und, dass sich *nicht ungewollt* etwas an deinem Kontostand *ändert*.
+
+In der Informatik und Datenverarbeitung kannst du deine *Daten* zu einer *Datenbank* bringen.
+
+== Was ist eine Datenbank?
+
+Eine Datenbank ist zunächst einmal eine *strukturierte Ansammlung* von Daten.
+
+Das kann eine einfache Liste auf einem Blatt Papier sein, wie zum Beispiel eine Einkaufsliste.
+Es kann auch eine Tabelle sein, beispielsweise ein Schulstundenplan.
+
+Wenn wir in der Informatik über eine Datenbank reden, meinen wir jedoch üblicherweise eine *Computerdatei* zum speichern von *digitalen Daten*.
+
+In einer solchen Datei legen wir *Strukturen* fest, um unsere Daten dort einsortieren zu können.
+Wir tun das oft in der Form von *Tabellen* und *Spalten*.
+Wir legen außerdem *Regeln* fest, an die sich unsere Daten halten müssen.
+Wir möchten zum Beispiel nicht, dass eine E-Mail Adresse in einer Spalte für Vornamen eingetragen wird.
+
+Mit Hilfe einer Datenbank können wir auf sehr flexible Weise Daten *speichern* und *abrufen*.
+
+== Was ist ein Datenbanksystem?
+
+Bei einer echten Bank hast du ein Konto.
+Dort legst du dein Geld ab.
+Die Bank verwaltet dein Konto und noch viele weitere Konten von anderen Kunden.
+
+Nun hast du eine Datenbank.
+Dort speicherst du deine Daten.
+Ein *Datenbanksystem* verwaltet deine Datenbank und noch viele weitere Datenbanken.
+
+Ein *Datenbanksystem* sorgt dafür, dass die Daten in deiner Datenbank...
+
+- *sicher verwahrt* sind,
+- du sie *jederzeit abrufen* kannst,
+- und, dass sich *nicht ungewollt* etwas an deinen Daten *ändert*.
+
+Das Datenbanksystem sorgt dafür, dass die festgelegten *Strukturen* und *Regeln* für deine Daten eingehalten werden.

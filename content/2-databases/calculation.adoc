@@ -1,0 +1,52 @@
+---
+title: "Berechnung von Werten"
+date: 2021-03-08
+draft: false
+weight: 7
+---
+
+Eine weitere wichtige Grundregel zur Speicherung von Daten ist die Regel zur *Berechnung von Werten*.
+
+Die Grundregel besagt, dass wir keine Daten speichern, die aus anderen Daten *abgeleitet* oder *berechnet* werden können.
+Wenn du also *Werte* ableiten oder berechnen kannst, speichere sie nicht in der Datenbank, sondern lasse sie vom Computer generieren.
+
+== Beispiel
+
+In einer Excel Tabelle würdest du zum Beispiel die Funktion `sum()` nutzen und nicht jede Summe händisch in die Tabelle eintragen.
+Wenn sich nun ein Wert ändert, wird deine Summe automatisch aktualisiert.
+
+.Excel
+[%header, format=csv, cols="0h,1,1", width=20%]
+|===
+,A,B
+1,25,
+2,60,
+3,35,
+4,14,
+5,=sum(A1:A4),
+|===
+
+== Welche Werte berechnen wir und welche können wir ableiten?
+
+Auf Datenbanken bezogen bedeutet das, dass du zum Beispiel den *Endbetrag*, die Summe einer Rechnung *nicht als Wert* in eine Tabellenspalte einträgst.
+Du lässt dir diesen Wert *berechnen*: `Rechnungssumme = Produkt Preis * Bestellte Menge`
+
+=== Wir berechnen nicht nur Zahlen, sondern auch andere Werte
+
+So musst du zum Beispiel nicht das *Alter* einer Person als *Wert* speichern und pflegen.
+Stattdessen *berechnest* du einfach das Alter: `Alter = Datum Heute - Geburtstag der Person`
+
+=== Text Daten dagegen können wir ableiten
+
+Benötigst du zum Beispiel die *Initialen* einer Person, nimmst du einfach den *ersten Buchstaben* aus der Spalte `Vornamen` und kombinierst diesen mit dem *ersten Buchstaben* aus der Spalte `Nachnamen`.
+
+[%header, format=csv, width=20%]
+|===
+Vorname,Nachname
+Andreas,Longo
+|===
+
+Initialen: AL
+
+Datenbanksysteme unterstützen dich dabei und bieten dir sehr viele Möglichkeiten zum *Berechnen* und *Ableiten* von Werten.
+Es gibt eine `SUM()` Funktion, ähnlich wie in in Excel, und noch viele Weitere.
