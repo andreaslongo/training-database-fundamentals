@@ -68,3 +68,5 @@ markup:
   asciidocExt:
     attributes:
       note-caption: '<i class="fas fa-info-circle"></i>'
+      experimental:
+      source-language: sql
