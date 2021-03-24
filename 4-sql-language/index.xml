@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Die SQL Sprache on Einstieg Datenbanken</title>
+    <link>https://training.andreaslongo.com/4-sql-language/</link>
+    <description>Recent content in Die SQL Sprache on Einstieg Datenbanken</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://training.andreaslongo.com/4-sql-language/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Was ist SQL?</title>
+      <link>https://training.andreaslongo.com/4-sql-language/sql-language/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/sql-language/</guid>
+      <description>Die Structured Query Language (SQL) ist eine weit verbreitete Sprache, ähnlich einer Programmiersprache, zur Verwaltung von relationalen Datenbanken.
+ Mit SQL kannst du…​
+   Datenstrukturen erstellen
+  Datensätze erfassen und ändern
+  Datensätze abfragen
+  …​
+   Microsoft SQL Server nutzt eine Variante der SQL Standardsprache und nennt diese Transact SQL (T-SQL). Diese Variante erweitert die grundlegende Sprache SQL um einige Zusatzkomponenten.
+ In diesem Kurs befassen wir uns mit der grundlegenden Sprache SQL.</description>
+    </item>
+    
+    <item>
+      <title>Der CREATE Befehl</title>
+      <link>https://training.andreaslongo.com/4-sql-language/create/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/create/</guid>
+      <description>Mit CREATE kannst du neue Objekte erstellen.
+ Eine Tabelle erstellen Du kannst zum Beispiel eine neue Tabelle in deiner Datenbank anlegen.
+ Öffne im Management Studio deine Datenbank, suche dir eine Tabelle aus und starte den Designer. Du siehst das Design der Tabelle.
+ Beispiel Tabelle Table 1. Mitarbeiter (Tabelle)     Column Name Data Type AllowNulls     MitarbeiterID
+ int
+    Vorname</description>
+    </item>
+    
+    <item>
+      <title>Der USE Befehl</title>
+      <link>https://training.andreaslongo.com/4-sql-language/use/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/use/</guid>
+      <description>Mit USE kannst du eine Datenbank auswählen.
+ Du kannst damit sicherstellen, dass Anweisungen auf der gewünschten Datenbank ausgeführt werden und nicht auf der falschen Datenbank.
+ Du kannst die aktive Datenbank auch mit dem Drop-Down Feld im Management Studio auswählen. USE hat den gleichen Effekt.
+ Datenbank mit dem Management Studio auswählen Öffne ein neues Query mit New Query.
+ Wähle nun die master Datenbank im Drop-Down Feld, und führe folgende Anweisung aus.</description>
+    </item>
+    
+    <item>
+      <title>Der ALTER Befehl</title>
+      <link>https://training.andreaslongo.com/4-sql-language/alter/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/alter/</guid>
+      <description>Mit ALTER kannst du existierende Objekte ändern.
+ Eine Spalten in eine Tabelle einfügen Mit ALTER und ADD kannst du zum Beispiel eine neue Spalte in eine Tabellen einfügen.
+ Öffne dazu ein neues Query.
+ USE [MeineNeueDatenbank]; ALTER TABLE MitarbeiterKopie ADD Gehalt money;   Prüfe die Abfrage und führe sie aus.
+ Du siehst nun die neue Spalte Gehalt in der Tabelle MitarbeiterKopie.
+   Mehrere Spalten einfügen Du kannst auch mehrere Spalten auf einmal hinzufügen.</description>
+    </item>
+    
+    <item>
+      <title>Der DROP Befehl</title>
+      <link>https://training.andreaslongo.com/4-sql-language/drop/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/drop/</guid>
+      <description>Mit DROP kannst du existierende Objekte löschen.
+ Du kannst damit nicht nur Spalten aus Tabellen entfernen, sondern auch ganze Tabellen oder sogar ganze Datenbanken löschen. Sei also vorsichtig mit diesem Befehl.
+ Eine Tabelle entfernen Öffne ein neues Query.
+ USE [MeineNeueDatenbank] DROP TABLE MitarbeiterKopie;   Prüfe die Abfrage und führe sie aus.
+ Du hast nun die Tabelle MitarbeiterKopie aus der Datenbank entfernt.
+ Du kannst Objekte nur entfernen, wenn das Objekt keine Abhängigkeiten zu anderen Objekten mehr hat.</description>
+    </item>
+    
+    <item>
+      <title>Der TRUNCATE Befehl</title>
+      <link>https://training.andreaslongo.com/4-sql-language/truncate/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/truncate/</guid>
+      <description>Mit TRUNCATE kannst alle Datensätze aus einer Tabelle löschen.
+ Die Datensätze werden gelöscht, aber die Spalten und andere Einstellungen bleiben bestehen. Das kann nützlich sein, wenn du zum Beispiel eine leere Tabelle brauchst, ohne diese neu anlegen zu müssen.
+ Datensätze löschen Öffne ein neues Query.
+ USE [MeineNeueDatenbank] SELECT * INTO KundenKopie FROM Kunden; USE [MeineNeueDatenbank] SELECT * FROM KundenKopie; USE [MeineNeueDatenbank] TRUNCATE TABLE KundenKopie; USE [MeineNeueDatenbank] SELECT * FROM KundenKopie;   Führe die Code Blöcke nacheinander aus, indem du sie einzeln markierst und dann Execute klickst.</description>
+    </item>
+    
+    <item>
+      <title>Aufgabe</title>
+      <link>https://training.andreaslongo.com/4-sql-language/challenge/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/challenge/</guid>
+      <description>Erstelle eine Tabelle mit SQL Anweisungen Nutze für die folgenden Aufgaben nur SQL-Befehle.
+ Öffne ein neues Query und kopiere die Aufgaben in den Editor. Wenn du fertig bist, speichere deine Lösung.
+ -- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe. -- Entferne die Tabelle aus deiner Datenbank. -- Erstelle die gleiche Tabelle erneut. -- Füge eine neue Spalte in die Tabelle ein.     </description>
+    </item>
+    
+    <item>
+      <title>Lösung</title>
+      <link>https://training.andreaslongo.com/4-sql-language/solution/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/4-sql-language/solution/</guid>
+      <description>Erstelle eine Tabelle mit SQL Anweisungen -- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe. USE MyBooks; -- Entferne die Tabelle aus deiner Datenbank DROP TABLE BookLocations; -- Erstelle die gleiche Tabelle erneut CREATE TABLE WhereAreMyBooks ( Title nvarchar(100) NOT NULL, Author nvarchar(100) NOT NULL, BookcaseLocation nvarchar(50) NOT NULL, ShelfNumber int NOT NULL ); -- Füge eine neue Spalte in die Tabelle ein ALTER TABLE WhereAreMyBooks ADD ISBN char(13) NULL ;     </description>
+    </item>
+    
+  </channel>
+</rss>

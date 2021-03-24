@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datenbanken on Einstieg Datenbanken</title>
+    <link>https://training.andreaslongo.com/2-databases/</link>
+    <description>Recent content in Datenbanken on Einstieg Datenbanken</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://training.andreaslongo.com/2-databases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Was sind Datenbanken?</title>
+      <link>https://training.andreaslongo.com/2-databases/databases/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/databases/</guid>
+      <description>Datenbanken sind ein zentraler Bestandteil unseres modernen Lebens. Sie kommen überall dort zum Einsatz, wo Informationen jeglicher Art gespeichert und verarbeitet werden. Du nutzt täglich mehrere Datenbanken, ohne davon etwas zu merken.
+ Datenbanken findest du beispielsweise…​
+   in Rechenzentren
+  auf deinem Computer
+  auf deinem Smartphone
+  auf deinem Fernsehgerät
+  …​
+   Aber was sind Datenbanken überhaupt und welche Vorteile bringen sie uns in der Welt der Datenverarbeitung?</description>
+    </item>
+    
+    <item>
+      <title>Das Datenbanksystem</title>
+      <link>https://training.andreaslongo.com/2-databases/database-system/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/database-system/</guid>
+      <description>Ein Datenbanksystem besteht aus zwei Komponenten:
+   eine oder mehrere Datenbanken
+  eine Verwaltungssoftware, das Database Management System (DBMS)
+   Das Database Management System (DBMS) ist ein Programm zum Erstellen und Verwalten von Datenbanken.
+ Zum Vergleich: Microsoft Excel ist ein Programm zum Erstellen und Verwalten von Kalkulationstabellen.
+ Ein DBMS stellt dir einen hoch-strukturierten und effizienten Speichermechanismus für deine Daten zur Verfügung.
+ Vielleicht hast du schon einmal von den verschiedenen SQL basierten DBMS gehört.</description>
+    </item>
+    
+    <item>
+      <title>Flatfile Datenbank</title>
+      <link>https://training.andreaslongo.com/2-databases/flat-file-database/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/flat-file-database/</guid>
+      <description>Schauen wir uns nun unsere erste konkrete Form einer Datenbank an — die Flatfile Datenbank.
+ Eine Flatfile Datenbank ist eine einfache Datenstruktur, die meist ohne DBMS eingesetzt wird. Es werden Strukturen und Regeln für Daten festgelegt. Die Daten werden dann in einer einfachen Textdatei (Flatfile) gespeichert.
+ Comma-separated values (CSV) Dateien sind beliebte Flatfile Datenbanken. Vielleicht hast du schon einmal eine solche .csv Datei gesehen.
+ Struktur einer Flatfile Datenbank Eine Flatfile Datenbank besteht aus…​</description>
+    </item>
+    
+    <item>
+      <title>Hierarchische Datenbank</title>
+      <link>https://training.andreaslongo.com/2-databases/hierarchical-databases/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/hierarchical-databases/</guid>
+      <description>Du hast gesehen, dass eine Flatfile Datenbank aus einer Tabelle besteht.
+ Eine hierarchische Datenbank besteht dagegen aus mehreren Tabellen, die in Beziehungen zueinander stehen.
+ Die Beziehungen der einzelnen Tabellen sind in einer Hierarchie angeordnet. Das bedeutet, die Tabellen stehen in einer sogenannten Eltern &amp;gt; Kind (Parent &amp;gt; Child) Beziehung zueinander.
+ Struktur einer hierarchischen Datenbank Eine hierarchische Datenbank besteht aus…​
+   mehreren Tabellen
+  die in Beziehung zueinander stehen.</description>
+    </item>
+    
+    <item>
+      <title>Relationale Datenbank</title>
+      <link>https://training.andreaslongo.com/2-databases/relational-databases/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/relational-databases/</guid>
+      <description>Die relationale Datenbank ist das am häufigsten verwendete Modell zur Datenspeicherung.
+ Eine relationale Datenbank vereint die Konzepte der Flatfile Datenbank mit Konzepten der hierarchischen Datenbank.
+ Struktur einer relationalen Datenbank Eine relationale Datenbank besteht aus…​
+   mehreren Tabellen,
+  die in Beziehungen zueinander stehen,
+  hat jedoch keine Einschränkungen der Beziehungen.
+   Damit können wir nun komplexere Beziehungen zwischen Daten abbilden.
+   Was ist eine Relation?</description>
+    </item>
+    
+    <item>
+      <title>Normalisierung</title>
+      <link>https://training.andreaslongo.com/2-databases/normalization/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/normalization/</guid>
+      <description>Die Normalisierung von Daten ist eine wichtige Grundlage zur Datenspeicherung.
+ Unter Normalisierung versteht man das Aufteilen von Attributen (Spalten) in ihre kleinstmöglichen Teile. Die Abfragen von Datensätzen wird dadurch erleichtert oder oft auch damit überhaupt erst ermöglicht.
+ Ein Beispiel Angenommen du möchtest die Adressen von verschiedenen Kunden in einer Flatfile Datenbank speichern.
+ Die Adresse eines Kunden schaut zum Beispiel so aus: Andreas Hauptstraße 17 5071 Wals-Siezenheim Salzburg     Entwurf Zuerst überlegst du dir eine sinnvolle Struktur für deine Daten.</description>
+    </item>
+    
+    <item>
+      <title>Berechnung von Werten</title>
+      <link>https://training.andreaslongo.com/2-databases/calculation/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/calculation/</guid>
+      <description>Eine weitere wichtige Grundregel zur Speicherung von Daten ist die Regel zur Berechnung von Werten.
+ Die Grundregel besagt, dass wir keine Daten speichern, die aus anderen Daten abgeleitet oder berechnet werden können. Wenn du also Werte ableiten oder berechnen kannst, speichere sie nicht in der Datenbank, sondern lasse sie vom Computer generieren.
+ Beispiel In einer Excel Tabelle würdest du zum Beispiel die Funktion sum() nutzen und nicht jede Summe händisch in die Tabelle eintragen.</description>
+    </item>
+    
+    <item>
+      <title>Datentypen und Regeln</title>
+      <link>https://training.andreaslongo.com/2-databases/datatypes-and-rules/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/2-databases/datatypes-and-rules/</guid>
+      <description>Bevor du nun dein neues Wissen in die Praxis umsetzen kannst, solltest du noch zwei wichtige Konzepte kennenlernen.
+ Datentypen Datentypen sind ein grundlegender Bestandteil jedes Computersystems. In der ein oder anderen Form begegnen sie dir überall, zum Beispiel bei Programmiersprachen oder auch bei Datenbanken.
+ Mit einem Datentypen beschreiben wir die Art, also den Typ eines Datenwertes. Wir legen beispielsweise fest, dass der Wert Salzburg ein Text ist und der Wert 1000 eine Zahl.</description>
+    </item>
+    
+  </channel>
+</rss>

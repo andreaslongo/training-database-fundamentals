@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Datenbank Server on Einstieg Datenbanken</title>
+    <link>https://training.andreaslongo.com/3-database-server/</link>
+    <description>Recent content in Datenbank Server on Einstieg Datenbanken</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://training.andreaslongo.com/3-database-server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Der Datenbankserver</title>
+      <link>https://training.andreaslongo.com/3-database-server/database-server/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/database-server/</guid>
+      <description>Wenn wir mit Datenbanken arbeiten, reden wir oft vom Datenbankserver. Aber wozu brauchen wir diesen?
+ Was macht ein Datenbankserver? Ein Datenbankserver stellt unsere Datenbanken bereit, damit wir mit ihnen arbeiten können.
+ Auf dem Datenbankserver läuft unsere Database Management System (DBMS) Software. Wenn wir ein DBMS installieren, erstellen wir damit eine sogenannte Instanz. Eine DBMS Installation ist also eine Instanz unseres Datenbanksystems.
+ Ein Server kann mehrere DBMS Instanzen zeitgleich und unabhängig voneinander betreiben.</description>
+    </item>
+    
+    <item>
+      <title>SQL Server Express installieren</title>
+      <link>https://training.andreaslongo.com/3-database-server/install-sql-express/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/install-sql-express/</guid>
+      <description>Vorbereitung  Installiere alle Updates für dein Betriebssystem (Windows Updates)
+  Starte die Installation mit einem klick auf die SQL Server Datei, die du zur Vorbereitung auf diesen Kurs heruntergeladen hast.
+   Es werden nun einige Dateien auf deinen Computer geladen. Wenn der Prozess abgeschlossen ist, siehst du ein neues Verzeichnis, welches eine SETUP.exe Datei enthält.
+   Installation Starte das SQL Server Installation Center mit einem Klick auf die SETUP.</description>
+    </item>
+    
+    <item>
+      <title>SQL Management Studio</title>
+      <link>https://training.andreaslongo.com/3-database-server/sql-managment-studio/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/sql-managment-studio/</guid>
+      <description>Das SQL Server Management Studio (SSMS) ist eine graphische Benurzerschnittstelle und dein Hauptwerkzeug, wenn du mit Microsoft SQL Server DBMS Instanzen arbeitest.
+ Du kannst damit…​
+   Instanzen verwalten
+  Datenbanken anlegen und löschen
+  Daten abfragen, erfassen, ändern und löschen
+  …​
+   Die meisten Aktionen im Management Studio kannst du mit einem Rechtsklick auf ein Objekt ausführen. Objekte sind zum Beispiel Datenbanken, Benutzer, Tabellen, und mehr.</description>
+    </item>
+    
+    <item>
+      <title>Eine Datenbank hinzufügen</title>
+      <link>https://training.andreaslongo.com/3-database-server/import-database/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/import-database/</guid>
+      <description>Es ist nun an der Zeit, dass du deine erste Datenbank in die Instanz einbindest.
+ Deine Instanz besteht aktuell nur aus den System Datenbanken. Die System Datenbanken enthalten Daten für die Instanz selbst. Dort sind Beispielsweise alle SQL User und Logins eingetragen.
+ User Datenbanken dagegen sind alle selbst erstellten Datenbanken. Dort sind deine eigenen Daten oder die Daten von Anwendungen gespeichert. Eine Instanz kann mehrere User Datenbanken verwalten.</description>
+    </item>
+    
+    <item>
+      <title>Eine neue Datenbank erstellen</title>
+      <link>https://training.andreaslongo.com/3-database-server/create-database/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/create-database/</guid>
+      <description>Nachdem wir eine bestehende Datenbank in die Instanz importier haben, wollen wir nun eine brandneue eigene Datenbank anlegen.
+ Eine neue Datenbank erstellen Klicke im Object Explorer mit der rechten Maustaste auf Databases › New Database…​.
+  Gib der neuen Datenbank einen Namen mit dem Feld Database name
+  Erstelle die Datenbank mit einem Klick auf OK
+   Wenn du eine Datenbank anlegst werden typischerweise zwei neue Dateien auf deiner Festplatte angelegt.</description>
+    </item>
+    
+    <item>
+      <title>Eine Tabelle erstellen</title>
+      <link>https://training.andreaslongo.com/3-database-server/create-table/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/create-table/</guid>
+      <description>Deine neue Datenbank enthält noch keine Daten. Doch bevor du Daten speichern kannst, musst du zuvor Strukturen für deine Daten schaffen.
+ Eine Tabelle anlegen Wir erstellen also zuerst eine Tabelle.
+ Klicke im Object Explorer, unter der neuen Datenbank, mit der rechten Maustaste auf Tables › Table…​
+ Eine Spalte hinzufügen Im folgenden Fenster legst du nun die Spalten für deine Tabelle fest. Jede Spalte bekommt einen Namen und einen Datentyp.</description>
+    </item>
+    
+    <item>
+      <title>Tabelle anpassen</title>
+      <link>https://training.andreaslongo.com/3-database-server/modify-table/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/modify-table/</guid>
+      <description>Du hast nun eine neue Tabelle in deiner Datenbank angelegt und diese mit Daten gefüllt.
+ Jetzt möchtest du eine neue Spalte in diese Tabelle einfügen. Du änderst damit das Design der Tabelle.
+ Designänderungen sind mit gewissen Gefahren verbunden, sofern die Datenbank schon von anderen Benutzern oder Systemen verwendet wird. Du solltest dabei also vorsichtig sein.
+ Unsere Datenbank befindet sich jedoch noch im Aufbau. Du kannst also beliebig Änderungen machen.</description>
+    </item>
+    
+    <item>
+      <title>Datenbank löschen</title>
+      <link>https://training.andreaslongo.com/3-database-server/drop-database/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/drop-database/</guid>
+      <description>Um eine Datenbank zu löschen, klicke mit der Rechten Maustaste auf den Namen der Datenbank und wähle Delete aus. Im folgenden Fenster solltest du noch Close existing connections aktivieren.
+ Eine Datenbank kann erst gelöscht werden, wenn keine Verbindungen mehr auf die Datenbank bestehen. Das können zum Beispiel andere Benutzer sein, die die Datenbank verwenden.
+ </description>
+    </item>
+    
+    <item>
+      <title>Datenbank Views</title>
+      <link>https://training.andreaslongo.com/3-database-server/views/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/views/</guid>
+      <description>In relationalen Datenbanken werden Tabellen in thematisch gruppierte Datensätze aufgeteilt, zum Beispiel die Tabellen Produkte und Kunden. Die Datensätze werden mit Hilfe von Schlüsseln (Keys) zu neuen Ansichten kombiniert, zum Beispiel die Tabelle Bestellungen.
+ Was sind Datenbank Views? SQL Server nutzt sogenannte Views um Datensätze aus mehreren Tabellen zu kombinieren, ohne die Datensätze in einer eigenen Tabelle zu speichern.
+ In unserer Beispieldatenbank sehen wir einige vorbereitete Views. Du findest diese im Management Studio unterhalb der Datenbank im Punkt Views.</description>
+    </item>
+    
+    <item>
+      <title>Die System Datenbanken</title>
+      <link>https://training.andreaslongo.com/3-database-server/system-databases/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/system-databases/</guid>
+      <description>Im Management Studio, unter dem Punkt Databases siehst du den Punkt System Databases. Dort befinden sich die System Datenbanken zum Beispiel master, model und tempdb. Dies sind vorgefertigte Datenbanken, die jede SQL Instanz benötigt. Sie werden bei der Installation des DBMS erstellt.
+ Du wirst nur recht selten direkt mit diesen Datenbanken zu tun haben. Es ist aber hilfreich zu wissen, wozu sie gut sind.
+ Master Die master Datenbank enthält die Konfiguration und einige weitere Details deiner Instanz.</description>
+    </item>
+    
+    <item>
+      <title>Aufgabe</title>
+      <link>https://training.andreaslongo.com/3-database-server/challenge/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/challenge/</guid>
+      <description>Erstelle deine eigene Datenbank Denke an die Typen von Informationen, die du speichern möchtest und beginne eine Datenbank um diese Anforderungen zu bauen.
+   Überlege dir eigene Anforderungen für deine Daten
+  Erstelle eine neue Datenbank
+  Erstelle eine Tabelle in der Datenbank
+  Füge einige Datensätze in deine Tabelle ein
+     </description>
+    </item>
+    
+    <item>
+      <title>Lösung</title>
+      <link>https://training.andreaslongo.com/3-database-server/solution/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/3-database-server/solution/</guid>
+      <description>Erstelle deine eigene Datenbank Datenbank: MyBooks
+ Tabelle
+ Table 1. BookLocations     Column Name Data Type Allow Nulls     Title
+ nvarchar(100)
+    Author
+ nvarchar(50)
+    BookcaseLocation
+ nvarchar(50)
+    ShelfNumber
+ int
+     Datensätze
+ Table 2. BookLocations     Title Author BookcaseLocation ShelfNumber     Maphead</description>
+    </item>
+    
+  </channel>
+</rss>

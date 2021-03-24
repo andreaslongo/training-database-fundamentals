@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mehr SQL on Einstieg Datenbanken</title>
+    <link>https://training.andreaslongo.com/5-more-sql/</link>
+    <description>Recent content in Mehr SQL on Einstieg Datenbanken</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://training.andreaslongo.com/5-more-sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transaktionen</title>
+      <link>https://training.andreaslongo.com/5-more-sql/transactions/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/transactions/</guid>
+      <description>In diesem Abschnitt beschäftigen wir uns mit SQL-Befehlen zum bearbeiten von Datensätzen. Diese Befehle basieren auf sogenannten Transaktionen.
+ Was sind Transaktionen? Zum Beispiel ist das Hinzufügen neuer Datensätze eine Transaktion.
+ Eine Transaktion kann entweder erfolgreich sein (alles OK) oder fehlschlagen. Schlägt eine Transaktion fehl, dann macht das Datenbanksystem alle Änderungen innerhalb dieser Transaktion rückgängig. Das ist ein Sicherheitsmechanismus des Datenbanksystems um Probleme innerhalb einzelner Datensätze zu vermeiden.
+   Eine erfolgreiche Transaktion Stelle dir zum Beispiel vor, du möchtest einen neuen Kunden in deiner Tabelle Kunden erfassen.</description>
+    </item>
+    
+    <item>
+      <title>Der SELECT Befehl</title>
+      <link>https://training.andreaslongo.com/5-more-sql/select/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/select/</guid>
+      <description>Mit SELECT kannst du Datensätze aus einer Tabelle abfragen.
+ Der Hauptgrund, warum wir Daten in einer Datenbank speichern ist, dass wir hinterher schnell und einfach Daten daraus abfragen können.
+ Wir möchten verschiedene Datensätze kombinieren um spezielle Fragen zu beantworten wie zum Beispiel &amp;#34;Wie viele rote Pullover wurden im letzten Jahr an Kunden aus Salzburg verkauft?&amp;#34;. Du kannst deine Abfragen auf vielfältige und flexible weisen filtern um genau die Daten zu bekommen, die du benötigst.</description>
+    </item>
+    
+    <item>
+      <title>Der INSERT Befehl</title>
+      <link>https://training.andreaslongo.com/5-more-sql/insert/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/insert/</guid>
+      <description>Mit INSERT kannst du neue Datensätze in eine Tabelle eintragen.
+ Datensätze eintragen Füge einen neuen Datensatz in die Tabelle Mitarbeiter ein.
+ USE [MeineNeueDatenbank]; INSERT INTO Mitarbeiter VALUES (&amp;#39;Martin&amp;#39;, &amp;#39;Hofer&amp;#39;, &amp;#39;IT Support&amp;#39;, &amp;#39;mhofer@example.com&amp;#39;) ;   Du kannst nun den neuen Eintrag in deiner Tabelle sehen.
+ Nutze SELECT um dir alle Einträge anzuzeigen.
+   Datensätzen gezielt eintragen Im letzten Beispiel hast du die Werte (Values) für deinen neuen Datensatz nach der Position der Spalten in deiner Tabelle eingetragen.</description>
+    </item>
+    
+    <item>
+      <title>Der UPDATE Befehl</title>
+      <link>https://training.andreaslongo.com/5-more-sql/update/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/update/</guid>
+      <description>Mit UPDATE kannst du Datensätze in einer Tabelle ändern.
+ Einen Datensatz ändern Wir möchten nun einen Datensatz in der Tabelle Mitarbeiter ändern.
+ Öffne ein neues Query.
+ Ändere nun die Email Adresse von Martin Hofer von mhofer@example.com auf itsupport@example.com
+ USE [MeineNeueDatenbank]; UPDATE Mitarbeiter SET Email = &amp;#39;itsupport@example.com&amp;#39; WHERE Email = &amp;#39;mhofer@example.com&amp;#39;;   Beachte die WHERE Klausel. Ohne diesen Filter würdest du alle Email Adressen in deiner Tabelle auf itsupport@example.</description>
+    </item>
+    
+    <item>
+      <title>Der DELETE Befehl</title>
+      <link>https://training.andreaslongo.com/5-more-sql/delete/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/delete/</guid>
+      <description>Mit DELETE kannst du Datensätze aus einer Tabelle löschen.
+ Du hast bereits den Befehl TRUNCATE kennengelernt, mit dem du alle Datensätze aus einer Tabelle entfernen kannst.
+ Mit dem DELETE Befehl kannst du einzelne Datensätze aus einer Tabelle löschen. Der Unterschied zwischen dem DELETE und dem TRUNCATE Befehl ist, dass du mit DELETE den WHERE Filter nutzen kannst um genau zu bestimmen, welche Datensätze gelöscht werden sollen.
+ Datensätze löschen Öffne ein neues Query.</description>
+    </item>
+    
+    <item>
+      <title>Der MERGE Befehl</title>
+      <link>https://training.andreaslongo.com/5-more-sql/merge/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/merge/</guid>
+      <description>Mit MERGE kannst du zwei Tabellen miteinander vergleichen und die Unterschiede in den Datensätzen entweder ergänzen, löschen oder überschreiben.
+ Der MERGE Befehl ist etwas komplizierter als die übrigen Befehle, die du bisher kennengelernt hast.
+ Änderungsdaten erstellen Öffne ein neues Query.
+ Erstelle eine neue Tabelle KundenUpdates.
+ USE [MeineNeueDatenbank]; CREATE TABLE KundenUpdates ( KundenID int NOT NULL, Vorname nvarchar(50), Nachname nvarchar(50), Telefonnummer nchar(30), Adresse nvarchar(255), Stadt nvarchar(50), Bundesland nchar(50), Postleitzahl nchar(4) );   Füge der Tabelle einige Datensätzen als Beispiele hinzu.</description>
+    </item>
+    
+    <item>
+      <title>Aufgabe</title>
+      <link>https://training.andreaslongo.com/5-more-sql/challenge/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/challenge/</guid>
+      <description>Nutze SQL Anweisungen für die Arbeit mit Datensätzen Nutze für die folgenden Aufgaben nur SQL-Befehle.
+ Öffne ein neues Query und kopiere die Aufgaben in den Editor. Wenn du fertig bist, speichere deine Lösung.
+ -- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein. -- Lösche einen der neuen Datensätze. -- Frage einige Daten mit dem `SELECT` Befehl ab.     </description>
+    </item>
+    
+    <item>
+      <title>Lösung</title>
+      <link>https://training.andreaslongo.com/5-more-sql/solution/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/5-more-sql/solution/</guid>
+      <description>Nutze SQL Anweisungen für die Arbeit mit Datensätzen -- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein. USE MyBooks; INSERT INTO WhereAreMyBooks (Title, Author, BookLocations, ShelfNumber) VALUES (&amp;#39;Treasure Island&amp;#39;, &amp;#39;RL Stevenson&amp;#39;, &amp;#39;Bedroom&amp;#39;, 4), (&amp;#39;Cloud Atlas&amp;#39;, &amp;#39;David Mitchell&amp;#39;, &amp;#39;Bedroom&amp;#39;, 2), (&amp;#39;How to Lie with Maps&amp;#39;, &amp;#39;Mark Monnonier&amp;#39;, &amp;#39;Office Left&amp;#39;, 3) ; SELECT * FROM WhereAreMyBooks; -- Lösche einen der neuen Datensätze. DELETE FROM WhereAreMyBooks WHERE Title = &amp;#39;Treasure Island&amp;#39; -- Frage einige Daten mit dem `SELECT` Befehl ab.</description>
+    </item>
+    
+  </channel>
+</rss>

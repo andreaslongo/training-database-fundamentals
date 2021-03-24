@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fortgeschrittene Konzepte on Einstieg Datenbanken</title>
+    <link>https://training.andreaslongo.com/6-advanced-concepts/</link>
+    <description>Recent content in Fortgeschrittene Konzepte on Einstieg Datenbanken</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>de-de</language>
+    <lastBuildDate>Mon, 08 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://training.andreaslongo.com/6-advanced-concepts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beziehungen</title>
+      <link>https://training.andreaslongo.com/6-advanced-concepts/relationships/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/6-advanced-concepts/relationships/</guid>
+      <description>Mit Beziehungen zwischen einzelnen Tabellen können wir unsere Daten strukturieren. Wir können verschiedene Arten von Beziehungen nutzen, um unterschiedliche Gegebenheiten aus der realen Welt zu modellieren.
+ Mit relationalen Datenbank können drei Arten von Beziehungen hergestellt werden:
+   Eins zu Eins (one to one)
+  Eins zu Mehreren (one to many
+  Mehrere zu Mehrere (many to many)
+   Die &amp;#34;Eins zu Eins&amp;#34; Beziehung Eins zu Eins Beziehungen werden über die Primärschlüssel (Primary Keys) von Tabellen hergestellt.</description>
+    </item>
+    
+    <item>
+      <title>Regeln (Constraints)</title>
+      <link>https://training.andreaslongo.com/6-advanced-concepts/constraints/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/6-advanced-concepts/constraints/</guid>
+      <description>Wenn wir Regeln für Spalten unserer Tabellen festlegen, können wir sicherstellen, dass die Daten in unseren Tabellen immer so gespeichert werden, wie wir es vorgeben.
+ In SQL Server können wir sogenannte Constraints festlegen.
+ Eine Constraint festlegen Wir möchten nun für unsere Tabelle Bestellungen festlegen, dass das Bestelldatum entweder der aktuelle Tag sein muss, oder in der Vergangenheit liegt.
+ Damit stellen wir sicher, dass in einer Bestellung nicht fälschlicherweise ein Datum aus der Zukunft eingetragen ist.</description>
+    </item>
+    
+    <item>
+      <title>Indizes</title>
+      <link>https://training.andreaslongo.com/6-advanced-concepts/indexes/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/6-advanced-concepts/indexes/</guid>
+      <description>Ein Index oder mehrere Indizes beschleunigen das Suchen und Abfragen von Daten in deiner Datenbank.
+ Was ist ein Index? Du kannst dir das als eine Art Inhaltsverzeichnis wie in einem Buch vorstellen. Wenn du eine bestimmte Information in einem Buch ohne Inhaltsverzeichnis finden möchtest, musst du jede Seite einzeln anschauen, bis du die gewünschte Information gefunden hast. Im Inhaltsverzeichnis kannst du dir einfach und schnell die passende Seitenzahl heraussuchen und öffnest die Seite direkt.</description>
+    </item>
+    
+    <item>
+      <title>Namenskonventionen</title>
+      <link>https://training.andreaslongo.com/6-advanced-concepts/naming-conventions/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/6-advanced-concepts/naming-conventions/</guid>
+      <description>Bevor du neue Datenbanken erstellst, ist es wichtig, dass du dir zunächst ein paar Gedanken über sinnvolle Namen für deine Objekte (Datenbank, Tabellen, Spalten, …​) machst. Du erleichterst dir damit das Schreiben von SQL Abfragen und die gesamte Arbeit mit Datenbankobjekten.
+ Beispiele Hier sind einige Beispiele, die dir dabei als Orientierung dienen sollen:
+   Nutze keine Leerzeichen und keine Sonderzeichen. Beispiel: EmailAdresse, nicht E-Mail Adresse
+  Nutze PascalCase für die Namen deiner Objekte und halte dich konsequent daran.</description>
+    </item>
+    
+    <item>
+      <title>Schemas</title>
+      <link>https://training.andreaslongo.com/6-advanced-concepts/schemas/</link>
+      <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://training.andreaslongo.com/6-advanced-concepts/schemas/</guid>
+      <description>Dir ist vielleicht aufgefallen, dass jedesmal wenn wir eine Tabelle erstellt haben die Buchstaben dbo vor dem Tabellennamen automatisch vom Datenbanksystem eingetragen wurden.
+ dbo steht für Datenbankbesitzer (Database Owner). Wenn wir Objekte erstellen, markiert das Datenbanksystem dieses Objekt mit der Identifikation der Person, die dieses Objekt besitzt.
+ Diese Markierung wird Schema genannt. Schemas werden genutzt um Tabellen in logische Gruppen einzuteilen.
+ Ein Beispiel In einer Firma könnte zum Beispiel die Abteilung &amp;#34;Verkauf&amp;#34; einige Kunden haben, über die sie Daten erfassen und die Abteilung &amp;#34;Werbung&amp;#34; erfasst ihre eigenen Kunden.</description>
+    </item>
+    
+  </channel>
+</rss>

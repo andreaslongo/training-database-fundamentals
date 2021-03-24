@@ -1,0 +1,75 @@
+<!doctype html><html lang=de class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.82.0"><meta name=description content="Grundlagen und Praxis für IT-Experten"><meta name=author content="Andreas Longo"><link rel=icon href=/images/favicon.png type=image/png><title>Der TRUNCATE Befehl :: Einstieg Datenbanken</title><link href=/css/nucleus.css?1616620046 rel=stylesheet><link href=/css/fontawesome-all.min.css?1616620046 rel=stylesheet><link href=/css/hybrid.css?1616620046 rel=stylesheet><link href=/css/featherlight.min.css?1616620046 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1616620046 rel=stylesheet><link href=/css/auto-complete.css?1616620046 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1616620046 rel=stylesheet><link href=/css/theme.css?1616620046 rel=stylesheet><link href=/css/tabs.css?1616620046 rel=stylesheet><link href=/css/hugo-theme.css?1616620046 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1616620046></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style></head><body data-url=/4-sql-language/truncate/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><p style=color:#fff;font-size:25px>{ <i class="fas fa-database"></i> } <b>Datenbanken</b></p></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Suchen...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1616620046></script><script type=text/javascript src=/js/auto-complete.js?1616620046></script><script type=text/javascript>var baseurl="https://training.andreaslongo.com"</script><script type=text/javascript src=/js/search.js?1616620046></script></div><div class=highlightable><ul class=topics><li data-nav-id=/1-start/ title=Start class=dd-item><a href=/1-start/>Start
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/1-start/welcome/ title=Willkommen class=dd-item><a href=/1-start/welcome/>Willkommen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-start/requirements/ title="Was du benötigst" class=dd-item><a href=/1-start/requirements/>Was du benötigst
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/2-databases/ title=Datenbanken class=dd-item><a href=/2-databases/><b>1. </b>Datenbanken
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/2-databases/databases/ title="Was sind Datenbanken?" class=dd-item><a href=/2-databases/databases/>Was sind Datenbanken?
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/database-system/ title="Das Datenbanksystem" class=dd-item><a href=/2-databases/database-system/>Das Datenbanksystem
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/flat-file-database/ title="Flatfile Datenbank" class=dd-item><a href=/2-databases/flat-file-database/>Flatfile Datenbank
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/hierarchical-databases/ title="Hierarchische Datenbank" class=dd-item><a href=/2-databases/hierarchical-databases/>Hierarchische Datenbank
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/relational-databases/ title="Relationale Datenbank" class=dd-item><a href=/2-databases/relational-databases/>Relationale Datenbank
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/normalization/ title=Normalisierung class=dd-item><a href=/2-databases/normalization/>Normalisierung
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/calculation/ title="Berechnung von Werten" class=dd-item><a href=/2-databases/calculation/>Berechnung von Werten
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/2-databases/datatypes-and-rules/ title="Datentypen und Regeln" class=dd-item><a href=/2-databases/datatypes-and-rules/>Datentypen und Regeln
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/3-database-server/ title="Datenbank Server" class=dd-item><a href=/3-database-server/><b>2. </b>Datenbank Server
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/3-database-server/database-server/ title="Der Datenbankserver" class=dd-item><a href=/3-database-server/database-server/>Der Datenbankserver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/sql-managment-studio/ title="SQL Management Studio" class=dd-item><a href=/3-database-server/sql-managment-studio/>SQL Management Studio
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/import-database/ title="Eine Datenbank hinzufügen" class=dd-item><a href=/3-database-server/import-database/>Eine Datenbank hinzufügen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/create-database/ title="Eine neue Datenbank erstellen" class=dd-item><a href=/3-database-server/create-database/>Eine neue Datenbank erstellen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/create-table/ title="Eine Tabelle erstellen" class=dd-item><a href=/3-database-server/create-table/>Eine Tabelle erstellen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/modify-table/ title="Tabelle anpassen" class=dd-item><a href=/3-database-server/modify-table/>Tabelle anpassen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/drop-database/ title="Datenbank löschen" class=dd-item><a href=/3-database-server/drop-database/>Datenbank löschen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/views/ title="Datenbank Views" class=dd-item><a href=/3-database-server/views/>Datenbank Views
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/system-databases/ title="Die System Datenbanken" class=dd-item><a href=/3-database-server/system-databases/>Die System Datenbanken
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/challenge/ title=Aufgabe class=dd-item><a href=/3-database-server/challenge/>Aufgabe
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/3-database-server/solution/ title=Lösung class=dd-item><a href=/3-database-server/solution/>Lösung
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/4-sql-language/ title="Die SQL Sprache" class="dd-item
+parent"><a href=/4-sql-language/><b>3. </b>Die SQL Sprache
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/4-sql-language/sql-language/ title="Was ist SQL?" class=dd-item><a href=/4-sql-language/sql-language/>Was ist SQL?
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/create/ title="Der CREATE Befehl" class=dd-item><a href=/4-sql-language/create/>Der CREATE Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/use/ title="Der USE Befehl" class=dd-item><a href=/4-sql-language/use/>Der USE Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/alter/ title="Der ALTER Befehl" class=dd-item><a href=/4-sql-language/alter/>Der ALTER Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/drop/ title="Der DROP Befehl" class=dd-item><a href=/4-sql-language/drop/>Der DROP Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/truncate/ title="Der TRUNCATE Befehl" class="dd-item active"><a href=/4-sql-language/truncate/>Der TRUNCATE Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/challenge/ title=Aufgabe class=dd-item><a href=/4-sql-language/challenge/>Aufgabe
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/4-sql-language/solution/ title=Lösung class=dd-item><a href=/4-sql-language/solution/>Lösung
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/5-more-sql/ title="Mehr SQL" class=dd-item><a href=/5-more-sql/><b>4. </b>Mehr SQL
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/5-more-sql/transactions/ title=Transaktionen class=dd-item><a href=/5-more-sql/transactions/>Transaktionen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/select/ title="Der SELECT Befehl" class=dd-item><a href=/5-more-sql/select/>Der SELECT Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/insert/ title="Der INSERT Befehl" class=dd-item><a href=/5-more-sql/insert/>Der INSERT Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/update/ title="Der UPDATE Befehl" class=dd-item><a href=/5-more-sql/update/>Der UPDATE Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/delete/ title="Der DELETE Befehl" class=dd-item><a href=/5-more-sql/delete/>Der DELETE Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/merge/ title="Der MERGE Befehl" class=dd-item><a href=/5-more-sql/merge/>Der MERGE Befehl
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/challenge/ title=Aufgabe class=dd-item><a href=/5-more-sql/challenge/>Aufgabe
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/5-more-sql/solution/ title=Lösung class=dd-item><a href=/5-more-sql/solution/>Lösung
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/6-advanced-concepts/ title="Fortgeschrittene Konzepte" class=dd-item><a href=/6-advanced-concepts/><b>5. </b>Fortgeschrittene Konzepte
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/6-advanced-concepts/relationships/ title=Beziehungen class=dd-item><a href=/6-advanced-concepts/relationships/>Beziehungen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/6-advanced-concepts/constraints/ title="Regeln (Constraints)" class=dd-item><a href=/6-advanced-concepts/constraints/>Regeln (Constraints)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/6-advanced-concepts/indexes/ title=Indizes class=dd-item><a href=/6-advanced-concepts/indexes/>Indizes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/6-advanced-concepts/naming-conventions/ title=Namenskonventionen class=dd-item><a href=/6-advanced-concepts/naming-conventions/>Namenskonventionen
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/6-advanced-concepts/schemas/ title=Schemas class=dd-item><a href=/6-advanced-concepts/schemas/>Schemas
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/7-end/ title=Ende class=dd-item><a href=/7-end/>Ende
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/7-end/next-steps/ title="Wie geht es weiter?" class=dd-item><a href=/7-end/next-steps/>Wie geht es weiter?
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3></h3><ul><li><a class=padding href=https://training.andreaslongo.com/glossary><i class="fas fa-fw fa-book-open"></i> Begriffe</a></li><li><a class=padding href=https://github.com/andreaslongo/training-database-fundamentals/tree/main/static/examples><i class="fas fa-fw fa-code"></i> Beispiele</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer><p><a href=https://www.andreaslongo.com><i class="far fa-copyright"></i> Andreas Longo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
+<span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=/>Einstieg Datenbanken</a> > <a href=/4-sql-language/>Die SQL Sprache</a> > Der TRUNCATE Befehl</span></div><div class=progress><div class=wrapper><nav id=TableOfContents></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Der TRUNCATE Befehl</h1><div class=paragraph><p>Mit <code>TRUNCATE</code> kannst <strong>alle</strong> Datensätze aus einer Tabelle <strong>löschen</strong>.</p></div><div class=paragraph><p>Die Datensätze werden gelöscht, aber die Spalten und andere Einstellungen bleiben bestehen.
+Das kann nützlich sein, wenn du zum Beispiel eine leere Tabelle brauchst, ohne diese neu anlegen zu müssen.</p></div><div class=sect1><h2 id=_datensätze_löschen>Datensätze löschen</h2><div class=sectionbody><div class=paragraph><p>Öffne ein neues Query.</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-sql data-lang=sql>USE [MeineNeueDatenbank]
+SELECT * INTO KundenKopie
+FROM Kunden;
+
+
+USE [MeineNeueDatenbank]
+SELECT *
+FROM KundenKopie;
+
+
+USE [MeineNeueDatenbank]
+TRUNCATE TABLE KundenKopie;
+
+
+USE [MeineNeueDatenbank]
+SELECT *
+FROM KundenKopie;</code></pre></div></div><div class=paragraph><p>Führe die Code Blöcke nacheinander aus, indem du sie einzeln markierst und dann <strong>Execute</strong> klickst.</p></div><div class=paragraph><p>Nach der <code>TRUNCATE</code> Anweisung sind alle Datensätze aus der Tabelle <code>KundenKopie</code> gelöscht.</p></div><div class=paragraph><p>Entferne nun noch die Tabelle <code>KundenKopie</code> aus der Datenbank.</p></div><div class=listingblock><div class=content><pre class=highlight><code class=language-sql data-lang=sql>USE [MeineNeueDatenbank]
+DROP TABLE KundenKopie;</code></pre></div></div></div></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/4-sql-language/drop/ title="Der DROP Befehl"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/4-sql-language/challenge/ title=Aufgabe style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1616620047></script><script src=/js/perfect-scrollbar.min.js?1616620047></script><script src=/js/perfect-scrollbar.jquery.min.js?1616620047></script><script src=/js/jquery.sticky.js?1616620047></script><script src=/js/featherlight.min.js?1616620047></script><script src=/js/highlight.pack.js?1616620047></script><script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1616620047></script><script src=/js/learn.js?1616620047></script><script src=/js/hugo-learn.js?1616620047></script><script src=/mermaid/mermaid.js?1616620047></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>

@@ -2,21 +2,165 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://training.andreaslongo.com/6-advanced-concepts/relationships/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/database-server/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://training.andreaslongo.com/1-start/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/transactions/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/sql-language/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/databases/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/7-end/next-steps/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://training.andreaslongo.com/1-start/welcome/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/database-system/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/create/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/select/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/6-advanced-concepts/constraints/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/install-sql-express/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://training.andreaslongo.com/1-start/requirements/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/insert/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/use/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/flat-file-database/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/6-advanced-concepts/indexes/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/sql-managment-studio/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/alter/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/update/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/import-database/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/hierarchical-databases/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/6-advanced-concepts/naming-conventions/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/delete/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/drop/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/create-database/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/relational-databases/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/6-advanced-concepts/schemas/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/merge/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/truncate/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/create-table/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/6-advanced-concepts/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/normalization/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/challenge/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/challenge/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/calculation/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/7-end/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/modify-table/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/drop-database/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/2-databases/datatypes-and-rules/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/4-sql-language/solution/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/5-more-sql/solution/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/views/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/system-databases/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/challenge/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://training.andreaslongo.com/3-database-server/solution/</loc>
+    <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://training.andreaslongo.com/</loc>
     <lastmod>2021-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://training.andreaslongo.com/categories/</loc>
-  </url><url>
     <loc>https://training.andreaslongo.com/glossary/</loc>
+  </url><url>
+    <loc>https://training.andreaslongo.com/categories/</loc>
   </url><url>
     <loc>https://training.andreaslongo.com/tags/</loc>
   </url>
