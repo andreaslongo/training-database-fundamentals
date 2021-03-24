@@ -16,6 +16,16 @@ params:
   disableInlineCopyToClipBoard: true
   showVisitedLinks: true
   disableMermaid: true
+  disableShortcutsTitle: true
+
+menu:
+  shortcuts:
+    - name: "<i class='fas fa-fw fa-book-open'></i> Begriffe"
+      url: /glossary
+      weight: 10
+    - name: "<i class='fas fa-fw fa-code'></i> Beispiele"
+      url: https://github.com/andreaslongo/training-database-fundamentals/tree/main/static/examples
+      weight: 11
 
 languages:
   de:
