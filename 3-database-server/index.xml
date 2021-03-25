@@ -133,12 +133,10 @@
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://training.andreaslongo.com/3-database-server/challenge/</guid>
-      <description>Erstelle deine eigene Datenbank Denke an die Typen von Informationen, die du speichern möchtest und beginne eine Datenbank um diese Anforderungen zu bauen.
-   Überlege dir eigene Anforderungen für deine Daten
-  Erstelle eine neue Datenbank
-  Erstelle eine Tabelle in der Datenbank
-  Füge einige Datensätze in deine Tabelle ein
-     </description>
+      <description>Erstelle deine eigene Datenbank Du hast den Auftrag bekommen, eine neue Datenbank für deine Firma zu entwerfen.
+ Deine Firma besitzt viele Bücher mit Fachwissen unterschiedlicher Bereiche. Diese Bücher sind allerdings nicht sortiert und auf viele verschiedene Räume aufgeteilt. In jedem Raum stehen ausserdem gleich mehrere Regale für Bücher.
+ Das macht es sehr schwierig für die Mitarbeiter, ein bestimmtes Buch zu finden.
+ Erstelle eine Datenbank in der du den genauen Standort eines Buches eintragen kannst.</description>
     </item>
     
     <item>
@@ -147,18 +145,18 @@
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://training.andreaslongo.com/3-database-server/solution/</guid>
-      <description>Erstelle deine eigene Datenbank Datenbank: MyBooks
+      <description>Erstelle deine eigene Datenbank Datenbank: BuecherAlongo
  Tabelle
- Table 1. BookLocations     Column Name Data Type Allow Nulls     Title
+ Table 1. BuchStandort     Column Name Data Type Allow Nulls     Titel
  nvarchar(100)
-    Author
- nvarchar(50)
-    BookcaseLocation
- nvarchar(50)
-    ShelfNumber
+    Autor
+ nvarchar(100)
+    RaumNummer
+ int
+    RegalNummer
  int
      Datensätze
- Table 2. BookLocations     Title Author BookcaseLocation ShelfNumber     Maphead</description>
+ Table 2. BuchStandort     Titel Autor RaumNummer RegalNummer     Windows Server 2019</description>
     </item>
     
   </channel>

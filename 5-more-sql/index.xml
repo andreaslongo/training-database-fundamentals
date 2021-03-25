@@ -98,7 +98,7 @@
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://training.andreaslongo.com/5-more-sql/solution/</guid>
-      <description>Nutze SQL Anweisungen für die Arbeit mit Datensätzen -- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein. USE MyBooks; INSERT INTO WhereAreMyBooks (Title, Author, BookLocations, ShelfNumber) VALUES (&amp;#39;Treasure Island&amp;#39;, &amp;#39;RL Stevenson&amp;#39;, &amp;#39;Bedroom&amp;#39;, 4), (&amp;#39;Cloud Atlas&amp;#39;, &amp;#39;David Mitchell&amp;#39;, &amp;#39;Bedroom&amp;#39;, 2), (&amp;#39;How to Lie with Maps&amp;#39;, &amp;#39;Mark Monnonier&amp;#39;, &amp;#39;Office Left&amp;#39;, 3) ; SELECT * FROM WhereAreMyBooks; -- Lösche einen der neuen Datensätze. DELETE FROM WhereAreMyBooks WHERE Title = &amp;#39;Treasure Island&amp;#39; -- Frage einige Daten mit dem `SELECT` Befehl ab.</description>
+      <description>Nutze SQL Anweisungen für die Arbeit mit Datensätzen -- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein. USE BuecherAlongo; INSERT INTO BuchStandort (Titel, Autor, RaumNummer, RegalNummer) VALUES (&amp;#39;Windows Server 2019&amp;#39;, &amp;#39;Peter Kloep&amp;#39;, 102, 2), (&amp;#39;Linux&amp;#39;, &amp;#39;Michael Kofler&amp;#39;, 201, 1), (&amp;#39;Sichere Windows-Infrastrukturen&amp;#39;, &amp;#39;Karsten Weigel&amp;#39;, 310, 5); SELECT * FROM BuchStandort; -- Lösche einen der neuen Datensätze. DELETE FROM BuchStandort WHERE Titel = &amp;#39;Windows Server 2019&amp;#39;; -- Frage einige Daten mit dem `SELECT` Befehl ab.</description>
     </item>
     
   </channel>

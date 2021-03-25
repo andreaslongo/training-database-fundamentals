@@ -107,7 +107,7 @@
       <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>https://training.andreaslongo.com/4-sql-language/solution/</guid>
-      <description>Erstelle eine Tabelle mit SQL Anweisungen -- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe. USE MyBooks; -- Entferne die Tabelle aus deiner Datenbank DROP TABLE BookLocations; -- Erstelle die gleiche Tabelle erneut CREATE TABLE WhereAreMyBooks ( Title nvarchar(100) NOT NULL, Author nvarchar(100) NOT NULL, BookcaseLocation nvarchar(50) NOT NULL, ShelfNumber int NOT NULL ); -- Füge eine neue Spalte in die Tabelle ein ALTER TABLE WhereAreMyBooks ADD ISBN char(13) NULL ;     </description>
+      <description>Erstelle eine Tabelle mit SQL Anweisungen -- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe. USE BuecherAlongo; -- Entferne die Tabelle aus deiner Datenbank DROP TABLE BuchStandort; -- Erstelle die gleiche Tabelle erneut CREATE TABLE BuchStandort ( Titel nvarchar(100) NOT NULL, Autor nvarchar(100) NOT NULL, RaumNummer nvarchar(50) NOT NULL, RegalNummer int NOT NULL ); -- Füge eine neue Spalte in die Tabelle ein ALTER TABLE BuchStandort ADD ISBN char(13) NULL;     </description>
     </item>
     
   </channel>

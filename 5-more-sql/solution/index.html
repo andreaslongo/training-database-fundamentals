@@ -1,6 +1,6 @@
-<!doctype html><html lang=de class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.82.0"><meta name=description content="Grundlagen und Praxis für IT-Experten"><meta name=author content="Andreas Longo"><link rel=icon href=/images/favicon.png type=image/png><title>Lösung :: Einstieg Datenbanken</title><link href=/css/nucleus.css?1616620047 rel=stylesheet><link href=/css/fontawesome-all.min.css?1616620047 rel=stylesheet><link href=/css/hybrid.css?1616620047 rel=stylesheet><link href=/css/featherlight.min.css?1616620047 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1616620047 rel=stylesheet><link href=/css/auto-complete.css?1616620047 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1616620047 rel=stylesheet><link href=/css/theme.css?1616620047 rel=stylesheet><link href=/css/tabs.css?1616620047 rel=stylesheet><link href=/css/hugo-theme.css?1616620047 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1616620047></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style></head><body data-url=/5-more-sql/solution/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><p style=color:#fff;font-size:25px>{ <i class="fas fa-database"></i> } <b>Datenbanken</b></p></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<!doctype html><html lang=de class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.82.0"><meta name=description content="Grundlagen und Praxis für IT-Experten"><meta name=author content="Andreas Longo"><link rel=icon href=/images/favicon.png type=image/png><title>Lösung :: Einstieg Datenbanken</title><link href=/css/nucleus.css?1616659270 rel=stylesheet><link href=/css/fontawesome-all.min.css?1616659270 rel=stylesheet><link href=/css/hybrid.css?1616659270 rel=stylesheet><link href=/css/featherlight.min.css?1616659270 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1616659270 rel=stylesheet><link href=/css/auto-complete.css?1616659270 rel=stylesheet><link href=/css/atom-one-dark-reasonable.css?1616659270 rel=stylesheet><link href=/css/theme.css?1616659270 rel=stylesheet><link href=/css/tabs.css?1616659270 rel=stylesheet><link href=/css/hugo-theme.css?1616659270 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1616659270></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}:not(pre)>code+span.copy-to-clipboard{display:none}</style></head><body data-url=/5-more-sql/solution/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=/><p style=color:#fff;font-size:25px>{ <i class="fas fa-database"></i> } <b>Datenbanken</b></p></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Suchen...>
-<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1616620047></script><script type=text/javascript src=/js/auto-complete.js?1616620047></script><script type=text/javascript>var baseurl="https://training.andreaslongo.com"</script><script type=text/javascript src=/js/search.js?1616620047></script></div><div class=highlightable><ul class=topics><li data-nav-id=/1-start/ title=Start class=dd-item><a href=/1-start/>Start
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js?1616659270></script><script type=text/javascript src=/js/auto-complete.js?1616659270></script><script type=text/javascript>var baseurl="https://training.andreaslongo.com"</script><script type=text/javascript src=/js/search.js?1616659270></script></div><div class=highlightable><ul class=topics><li data-nav-id=/1-start/ title=Start class=dd-item><a href=/1-start/>Start
 <i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/1-start/welcome/ title=Willkommen class=dd-item><a href=/1-start/welcome/>Willkommen
 <i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/1-start/requirements/ title="Was du benötigst" class=dd-item><a href=/1-start/requirements/>Was du benötigst
 <i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/2-databases/ title=Datenbanken class=dd-item><a href=/2-databases/><b>1. </b>Datenbanken
@@ -54,34 +54,33 @@ parent"><a href=/5-more-sql/><b>4. </b>Mehr SQL
 <i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3></h3><ul><li><a class=padding href=https://training.andreaslongo.com/glossary><i class="fas fa-fw fa-book-open"></i> Begriffe</a></li><li><a class=padding href=https://github.com/andreaslongo/training-database-fundamentals/tree/main/static/examples><i class="fas fa-fw fa-code"></i> Beispiele</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Verlauf löschen</a></li></ul></section><section id=footer><p><a href=https://www.andreaslongo.com><i class="far fa-copyright"></i> Andreas Longo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links><a href=/>Einstieg Datenbanken</a> > <a href=/5-more-sql/>Mehr SQL</a> > Lösung</span></div><div class=progress><div class=wrapper><nav id=TableOfContents></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Lösung</h1><div class=sect1><h2 id=_nutze_sql_anweisungen_für_die_arbeit_mit_datensätzen>Nutze SQL Anweisungen für die Arbeit mit Datensätzen</h2><div class=sectionbody><div class=listingblock><div class=content><pre class=highlight><code class=language-sql data-lang=sql>-- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein.
-USE MyBooks;
+USE BuecherAlongo;
 
-INSERT INTO WhereAreMyBooks (Title, Author, BookLocations, ShelfNumber)
-VALUES (&#39;Treasure Island&#39;, &#39;RL Stevenson&#39;, &#39;Bedroom&#39;, 4),
-       (&#39;Cloud Atlas&#39;, &#39;David Mitchell&#39;, &#39;Bedroom&#39;, 2),
-       (&#39;How to Lie with Maps&#39;, &#39;Mark Monnonier&#39;, &#39;Office Left&#39;, 3)
-;
+INSERT INTO BuchStandort (Titel, Autor, RaumNummer, RegalNummer)
+VALUES (&#39;Windows Server 2019&#39;, &#39;Peter Kloep&#39;, 102, 2),
+       (&#39;Linux&#39;, &#39;Michael Kofler&#39;, 201, 1),
+       (&#39;Sichere Windows-Infrastrukturen&#39;, &#39;Karsten Weigel&#39;, 310, 5);
 
 SELECT *
-FROM WhereAreMyBooks;
+FROM BuchStandort;
 
 
 -- Lösche einen der neuen Datensätze.
 DELETE
-FROM WhereAreMyBooks
-WHERE Title = &#39;Treasure Island&#39;
+FROM BuchStandort
+WHERE Titel = &#39;Windows Server 2019&#39;;
 
 
 -- Frage einige Daten mit dem `SELECT` Befehl ab.
 SELECT *
-FORM WhereAreMyBooks
-WHERE Author = &#39;David Mitchell&#39;
+FROM BuchStandort
+WHERE Autor = &#39;Michael Kofler&#39;;
 
 SELECT *
-FORM WhereAreMyBooks
-WHERE BookcaseLocation = &#39;office left&#39;
+FROM BuchStandort
+WHERE RaumNummer = 310;
 
 SELECT *
-FORM WhereAreMyBooks
-WHERE Title LIKE &#39;%map%&#39;</code></pre></div></div></div></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/5-more-sql/challenge/ title=Aufgabe><i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/6-advanced-concepts/ title="Fortgeschrittene Konzepte" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1616620048></script><script src=/js/perfect-scrollbar.min.js?1616620048></script><script src=/js/perfect-scrollbar.jquery.min.js?1616620048></script><script src=/js/jquery.sticky.js?1616620048></script><script src=/js/featherlight.min.js?1616620048></script><script src=/js/highlight.pack.js?1616620048></script><script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1616620048></script><script src=/js/learn.js?1616620048></script><script src=/js/hugo-learn.js?1616620048></script><script src=/mermaid/mermaid.js?1616620048></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>
+FROM BuchStandort
+WHERE Titel LIKE &#39;%windows%&#39;;</code></pre></div></div></div></div><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=/5-more-sql/challenge/ title=Aufgabe><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/6-advanced-concepts/ title="Fortgeschrittene Konzepte" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1616659270></script><script src=/js/perfect-scrollbar.min.js?1616659270></script><script src=/js/perfect-scrollbar.jquery.min.js?1616659270></script><script src=/js/jquery.sticky.js?1616659270></script><script src=/js/featherlight.min.js?1616659270></script><script src=/js/highlight.pack.js?1616659270></script><script>hljs.initHighlightingOnLoad()</script><script src=/js/modernizr.custom-3.6.0.js?1616659270></script><script src=/js/learn.js?1616659270></script><script src=/js/hugo-learn.js?1616659270></script><script src=/mermaid/mermaid.js?1616659270></script><script>mermaid.initialize({startOnLoad:!0})</script></body></html>
