@@ -7,26 +7,26 @@ weight: 12
 
 == Erstelle deine eigene Datenbank
 
-Datenbank: `MyBooks`
+Datenbank: `BuecherAlongo`
 
 *Tabelle*
 
-.BookLocations
+.BuchStandort
 [%header,format=csv, width=40%]
 |===
 Column Name,Data Type,Allow Nulls
-Title,nvarchar(100),
-Author,nvarchar(50),
-BookcaseLocation,nvarchar(50),
-ShelfNumber,int,
+Titel,nvarchar(100),
+Autor,nvarchar(100),
+RaumNummer,int,
+RegalNummer,int,
 |===
 
 *Datensätze*
 
-.BookLocations
+.BuchStandort
 [%header,format=csv, width=35%]
 |===
-Title,Author,BookcaseLocation,ShelfNumber
-Maphead,Ken Jennings,Office Left,2
-The Bone Clocks,David Mitchell,Nightstand,1
+Titel,Autor,RaumNummer,RegalNummer
+Windows Server 2019,Peter Kloep,102,2
+Linux,Michael Kofler,201,1
 |===

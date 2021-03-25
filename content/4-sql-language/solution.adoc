@@ -11,24 +11,23 @@ weight: 8
 [source]
 ----
 -- Verbinde dich zu deiner Datenbank aus der ersten Aufgabe.
-USE MyBooks;
+USE BuecherAlongo;
 
 
 -- Entferne die Tabelle aus deiner Datenbank
-DROP TABLE BookLocations;
+DROP TABLE BuchStandort;
 
 
 -- Erstelle die gleiche Tabelle erneut
-CREATE TABLE WhereAreMyBooks (
-    Title nvarchar(100) NOT NULL,
-    Author nvarchar(100) NOT NULL,
-    BookcaseLocation nvarchar(50) NOT NULL,
-    ShelfNumber int NOT NULL
+CREATE TABLE BuchStandort (
+    Titel nvarchar(100) NOT NULL,
+    Autor nvarchar(100) NOT NULL,
+    RaumNummer nvarchar(50) NOT NULL,
+    RegalNummer int NOT NULL
 );
 
 
 -- Füge eine neue Spalte in die Tabelle ein
-ALTER TABLE WhereAreMyBooks
-    ADD ISBN char(13) NULL
-;
+ALTER TABLE BuchStandort
+    ADD ISBN char(13) NULL;
 ----

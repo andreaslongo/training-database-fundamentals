@@ -11,34 +11,33 @@ weight: 8
 [source]
 ----
 -- Füge drei neue Datensätze in die Tabelle deiner Datenbank aus der ersten Aufgabe ein.
-USE MyBooks;
+USE BuecherAlongo;
 
-INSERT INTO WhereAreMyBooks (Title, Author, BookLocations, ShelfNumber)
-VALUES ('Treasure Island', 'RL Stevenson', 'Bedroom', 4),
-       ('Cloud Atlas', 'David Mitchell', 'Bedroom', 2),
-       ('How to Lie with Maps', 'Mark Monnonier', 'Office Left', 3)
-;
+INSERT INTO BuchStandort (Titel, Autor, RaumNummer, RegalNummer)
+VALUES ('Windows Server 2019', 'Peter Kloep', 102, 2),
+       ('Linux', 'Michael Kofler', 201, 1),
+       ('Sichere Windows-Infrastrukturen', 'Karsten Weigel', 310, 5);
 
 SELECT *
-FROM WhereAreMyBooks;
+FROM BuchStandort;
 
 
 -- Lösche einen der neuen Datensätze.
 DELETE
-FROM WhereAreMyBooks
-WHERE Title = 'Treasure Island'
+FROM BuchStandort
+WHERE Titel = 'Windows Server 2019';
 
 
 -- Frage einige Daten mit dem `SELECT` Befehl ab.
 SELECT *
-FORM WhereAreMyBooks
-WHERE Author = 'David Mitchell'
+FROM BuchStandort
+WHERE Autor = 'Michael Kofler';
 
 SELECT *
-FORM WhereAreMyBooks
-WHERE BookcaseLocation = 'office left'
+FROM BuchStandort
+WHERE RaumNummer = 310;
 
 SELECT *
-FORM WhereAreMyBooks
-WHERE Title LIKE '%map%'
+FROM BuchStandort
+WHERE Titel LIKE '%windows%';
 ----
