@@ -1,0 +1,5 @@
+<div id="quiz"> </div>
+<script type="application/json" id="quiz-questions">
+    {{ .Inner }}
+</script>
+<script type="module" src="{{"js/quiz.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>

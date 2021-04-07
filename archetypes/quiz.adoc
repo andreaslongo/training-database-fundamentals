@@ -1,0 +1,27 @@
+---
+title: ""
+date: 2021-01-01
+draft: false
+weight: 0
+---
+
+{{< quiz >}}
+[
+    {
+        "question": "Was ist eine Datenbank?",
+        "correct_answer": "Eine strukturierte Ansammlung von Daten",
+        "incorrect_answers": [
+            "Eine Computerdatei",
+            "Ein Modell",
+	    "Eine Software zur Speicherung von Daten"
+        ]
+    },
+    {
+        "question": "Eine Datenbank ist eine strukturierte Ansammlung von Daten",
+        "correct_answer": "Richtig",
+        "incorrect_answers": [
+            "Falsch"
+        ]
+    }
+]
+{{< /quiz >}}
